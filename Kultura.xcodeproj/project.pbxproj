@@ -1,0 +1,777 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F685F29F2D066DDB00090EBF /* KulturaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685F29E2D066DDB00090EBF /* KulturaApp.swift */; };
+		F685F2A12D066DDB00090EBF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685F2A02D066DDB00090EBF /* ContentView.swift */; };
+		F685F2A32D066DDD00090EBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F685F2A22D066DDD00090EBF /* Assets.xcassets */; };
+		F685F2A62D066DDD00090EBF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F685F2A52D066DDD00090EBF /* Preview Assets.xcassets */; };
+		F685F2B02D066DDD00090EBF /* KulturaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685F2AF2D066DDD00090EBF /* KulturaTests.swift */; };
+		F685F2BA2D066DDD00090EBF /* KulturaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685F2B92D066DDD00090EBF /* KulturaUITests.swift */; };
+		F685F2BC2D066DDD00090EBF /* KulturaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685F2BB2D066DDD00090EBF /* KulturaUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F685F2AC2D066DDD00090EBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F685F2932D066DDB00090EBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F685F29A2D066DDB00090EBF;
+			remoteInfo = Kultura;
+		};
+		F685F2B62D066DDD00090EBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F685F2932D066DDB00090EBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F685F29A2D066DDB00090EBF;
+			remoteInfo = Kultura;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F685F29B2D066DDB00090EBF /* Kultura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kultura.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F685F29E2D066DDB00090EBF /* KulturaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturaApp.swift; sourceTree = "<group>"; };
+		F685F2A02D066DDB00090EBF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F685F2A22D066DDD00090EBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F685F2A52D066DDD00090EBF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F685F2AB2D066DDD00090EBF /* KulturaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KulturaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F685F2AF2D066DDD00090EBF /* KulturaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturaTests.swift; sourceTree = "<group>"; };
+		F685F2B52D066DDD00090EBF /* KulturaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KulturaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F685F2B92D066DDD00090EBF /* KulturaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturaUITests.swift; sourceTree = "<group>"; };
+		F685F2BB2D066DDD00090EBF /* KulturaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F685F2982D066DDB00090EBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F685F2A82D066DDD00090EBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F685F2B22D066DDD00090EBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F685F2922D066DDB00090EBF = {
+			isa = PBXGroup;
+			children = (
+				F685F29D2D066DDB00090EBF /* Kultura */,
+				F685F2AE2D066DDD00090EBF /* KulturaTests */,
+				F685F2B82D066DDD00090EBF /* KulturaUITests */,
+				F685F29C2D066DDB00090EBF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F685F29C2D066DDB00090EBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F685F29B2D066DDB00090EBF /* Kultura.app */,
+				F685F2AB2D066DDD00090EBF /* KulturaTests.xctest */,
+				F685F2B52D066DDD00090EBF /* KulturaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F685F29D2D066DDB00090EBF /* Kultura */ = {
+			isa = PBXGroup;
+			children = (
+				F685F2C82D066EF400090EBF /* App */,
+				F685F2C92D066EFA00090EBF /* Core */,
+				F685F2CE2D066F2500090EBF /* Database */,
+				F685F2CF2D066F2D00090EBF /* DI */,
+				F685F2CA2D066EFF00090EBF /* Features */,
+				F685F2CB2D066F0A00090EBF /* Navigation */,
+				F685F2CC2D066F1400090EBF /* Network */,
+				F685F2CD2D066F1B00090EBF /* Resources */,
+			);
+			path = Kultura;
+			sourceTree = "<group>";
+		};
+		F685F2A42D066DDD00090EBF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F685F2A52D066DDD00090EBF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F685F2AE2D066DDD00090EBF /* KulturaTests */ = {
+			isa = PBXGroup;
+			children = (
+				F685F2AF2D066DDD00090EBF /* KulturaTests.swift */,
+			);
+			path = KulturaTests;
+			sourceTree = "<group>";
+		};
+		F685F2B82D066DDD00090EBF /* KulturaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F685F2B92D066DDD00090EBF /* KulturaUITests.swift */,
+				F685F2BB2D066DDD00090EBF /* KulturaUITestsLaunchTests.swift */,
+			);
+			path = KulturaUITests;
+			sourceTree = "<group>";
+		};
+		F685F2C82D066EF400090EBF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F685F2A02D066DDB00090EBF /* ContentView.swift */,
+				F685F29E2D066DDB00090EBF /* KulturaApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F685F2C92D066EFA00090EBF /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F685F2D32D066FE400090EBF /* Models */,
+				F685F2D42D066FEB00090EBF /* ViewModels */,
+				F685F2D52D066FF200090EBF /* Services */,
+				F685F2D62D066FF700090EBF /* Utilities */,
+				F685F2D72D066FFD00090EBF /* Managers */,
+				F685F2D82D06700300090EBF /* Enums */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F685F2CA2D066EFF00090EBF /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		F685F2CB2D066F0A00090EBF /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				F685F2DE2D06708800090EBF /* FeatureCoordinators */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		F685F2CC2D066F1400090EBF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F685F2D92D06704A00090EBF /* API */,
+				F685F2DA2D06705000090EBF /* Repositories */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F685F2CD2D066F1B00090EBF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F685F2D02D066F7400090EBF /* Assets */,
+				F685F2D12D066F7B00090EBF /* Localization */,
+				F685F2D22D066F8100090EBF /* Themes */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F685F2CE2D066F2500090EBF /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				F685F2DD2D06706D00090EBF /* DatabaseManager */,
+				F685F2DC2D06706800090EBF /* Migrations */,
+				F685F2DB2D06706100090EBF /* Entities */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		F685F2CF2D066F2D00090EBF /* DI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		F685F2D02D066F7400090EBF /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F685F2A42D066DDD00090EBF /* Preview Content */,
+				F685F2A22D066DDD00090EBF /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		F685F2D12D066F7B00090EBF /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		F685F2D22D066F8100090EBF /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		F685F2D32D066FE400090EBF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F685F2D42D066FEB00090EBF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F685F2D52D066FF200090EBF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F685F2D62D066FF700090EBF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F685F2D72D066FFD00090EBF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F685F2D82D06700300090EBF /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		F685F2D92D06704A00090EBF /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		F685F2DA2D06705000090EBF /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		F685F2DB2D06706100090EBF /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F685F2DC2D06706800090EBF /* Migrations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Migrations;
+			sourceTree = "<group>";
+		};
+		F685F2DD2D06706D00090EBF /* DatabaseManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DatabaseManager;
+			sourceTree = "<group>";
+		};
+		F685F2DE2D06708800090EBF /* FeatureCoordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FeatureCoordinators;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F685F29A2D066DDB00090EBF /* Kultura */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F685F2BF2D066DDD00090EBF /* Build configuration list for PBXNativeTarget "Kultura" */;
+			buildPhases = (
+				F685F2972D066DDB00090EBF /* Sources */,
+				F685F2982D066DDB00090EBF /* Frameworks */,
+				F685F2992D066DDB00090EBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kultura;
+			productName = Kultura;
+			productReference = F685F29B2D066DDB00090EBF /* Kultura.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F685F2AA2D066DDD00090EBF /* KulturaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F685F2C22D066DDD00090EBF /* Build configuration list for PBXNativeTarget "KulturaTests" */;
+			buildPhases = (
+				F685F2A72D066DDD00090EBF /* Sources */,
+				F685F2A82D066DDD00090EBF /* Frameworks */,
+				F685F2A92D066DDD00090EBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F685F2AD2D066DDD00090EBF /* PBXTargetDependency */,
+			);
+			name = KulturaTests;
+			productName = KulturaTests;
+			productReference = F685F2AB2D066DDD00090EBF /* KulturaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F685F2B42D066DDD00090EBF /* KulturaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F685F2C52D066DDD00090EBF /* Build configuration list for PBXNativeTarget "KulturaUITests" */;
+			buildPhases = (
+				F685F2B12D066DDD00090EBF /* Sources */,
+				F685F2B22D066DDD00090EBF /* Frameworks */,
+				F685F2B32D066DDD00090EBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F685F2B72D066DDD00090EBF /* PBXTargetDependency */,
+			);
+			name = KulturaUITests;
+			productName = KulturaUITests;
+			productReference = F685F2B52D066DDD00090EBF /* KulturaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F685F2932D066DDB00090EBF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					F685F29A2D066DDB00090EBF = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					F685F2AA2D066DDD00090EBF = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = F685F29A2D066DDB00090EBF;
+					};
+					F685F2B42D066DDD00090EBF = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = F685F29A2D066DDB00090EBF;
+					};
+				};
+			};
+			buildConfigurationList = F685F2962D066DDB00090EBF /* Build configuration list for PBXProject "Kultura" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F685F2922D066DDB00090EBF;
+			productRefGroup = F685F29C2D066DDB00090EBF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F685F29A2D066DDB00090EBF /* Kultura */,
+				F685F2AA2D066DDD00090EBF /* KulturaTests */,
+				F685F2B42D066DDD00090EBF /* KulturaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F685F2992D066DDB00090EBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F685F2A62D066DDD00090EBF /* Preview Assets.xcassets in Resources */,
+				F685F2A32D066DDD00090EBF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F685F2A92D066DDD00090EBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F685F2B32D066DDD00090EBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F685F2972D066DDB00090EBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F685F2A12D066DDB00090EBF /* ContentView.swift in Sources */,
+				F685F29F2D066DDB00090EBF /* KulturaApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F685F2A72D066DDD00090EBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F685F2B02D066DDD00090EBF /* KulturaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F685F2B12D066DDD00090EBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F685F2BA2D066DDD00090EBF /* KulturaUITests.swift in Sources */,
+				F685F2BC2D066DDD00090EBF /* KulturaUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F685F2AD2D066DDD00090EBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F685F29A2D066DDB00090EBF /* Kultura */;
+			targetProxy = F685F2AC2D066DDD00090EBF /* PBXContainerItemProxy */;
+		};
+		F685F2B72D066DDD00090EBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F685F29A2D066DDB00090EBF /* Kultura */;
+			targetProxy = F685F2B62D066DDD00090EBF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F685F2BD2D066DDD00090EBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F685F2BE2D066DDD00090EBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F685F2C02D066DDD00090EBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Kultura/Preview Content\"";
+				DEVELOPMENT_TEAM = FJ7F33948Q;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.turalbabayev.Kultura;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F685F2C12D066DDD00090EBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Kultura/Preview Content\"";
+				DEVELOPMENT_TEAM = FJ7F33948Q;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.turalbabayev.Kultura;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F685F2C32D066DDD00090EBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FJ7F33948Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.turalbabayev.KulturaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kultura.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kultura";
+			};
+			name = Debug;
+		};
+		F685F2C42D066DDD00090EBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FJ7F33948Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.turalbabayev.KulturaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kultura.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kultura";
+			};
+			name = Release;
+		};
+		F685F2C62D066DDD00090EBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FJ7F33948Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.turalbabayev.KulturaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Kultura;
+			};
+			name = Debug;
+		};
+		F685F2C72D066DDD00090EBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FJ7F33948Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.turalbabayev.KulturaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Kultura;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F685F2962D066DDB00090EBF /* Build configuration list for PBXProject "Kultura" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F685F2BD2D066DDD00090EBF /* Debug */,
+				F685F2BE2D066DDD00090EBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F685F2BF2D066DDD00090EBF /* Build configuration list for PBXNativeTarget "Kultura" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F685F2C02D066DDD00090EBF /* Debug */,
+				F685F2C12D066DDD00090EBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F685F2C22D066DDD00090EBF /* Build configuration list for PBXNativeTarget "KulturaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F685F2C32D066DDD00090EBF /* Debug */,
+				F685F2C42D066DDD00090EBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F685F2C52D066DDD00090EBF /* Build configuration list for PBXNativeTarget "KulturaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F685F2C62D066DDD00090EBF /* Debug */,
+				F685F2C72D066DDD00090EBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F685F2932D066DDB00090EBF /* Project object */;
+}
