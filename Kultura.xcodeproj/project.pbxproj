@@ -14,6 +14,9 @@
 		F685F2B02D066DDD00090EBF /* KulturaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685F2AF2D066DDD00090EBF /* KulturaTests.swift */; };
 		F685F2BA2D066DDD00090EBF /* KulturaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685F2B92D066DDD00090EBF /* KulturaUITests.swift */; };
 		F685F2BC2D066DDD00090EBF /* KulturaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685F2BB2D066DDD00090EBF /* KulturaUITestsLaunchTests.swift */; };
+		F6BD9F9E2D170ECA008B920C /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9F9D2D170EC7008B920C /* OnboardingModel.swift */; };
+		F6BD9FA02D170ED4008B920C /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9F9F2D170ECD008B920C /* OnboardingViewModel.swift */; };
+		F6BD9FA22D170EDB008B920C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9FA12D170ED8008B920C /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,10 @@
 		F685F2B52D066DDD00090EBF /* KulturaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KulturaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F685F2B92D066DDD00090EBF /* KulturaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturaUITests.swift; sourceTree = "<group>"; };
 		F685F2BB2D066DDD00090EBF /* KulturaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F6BD9F9D2D170EC7008B920C /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
+		F6BD9F9F2D170ECD008B920C /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		F6BD9FA12D170ED8008B920C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		F6BD9FA52D170FF5008B920C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +101,7 @@
 		F685F29D2D066DDB00090EBF /* Kultura */ = {
 			isa = PBXGroup;
 			children = (
+				F6BD9FA52D170FF5008B920C /* Info.plist */,
 				F685F2C82D066EF400090EBF /* App */,
 				F685F2C92D066EFA00090EBF /* Core */,
 				F685F2CE2D066F2500090EBF /* Database */,
@@ -156,6 +164,7 @@
 		F685F2CA2D066EFF00090EBF /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F6BD9F9C2D170EAB008B920C /* Onboarding */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -180,6 +189,7 @@
 		F685F2CD2D066F1B00090EBF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F6BD9FA62D171009008B920C /* New Group */,
 				F685F2D02D066F7400090EBF /* Assets */,
 				F685F2D12D066F7B00090EBF /* Localization */,
 				F685F2D22D066F8100090EBF /* Themes */,
@@ -309,6 +319,23 @@
 			children = (
 			);
 			path = FeatureCoordinators;
+			sourceTree = "<group>";
+		};
+		F6BD9F9C2D170EAB008B920C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				F6BD9FA12D170ED8008B920C /* OnboardingView.swift */,
+				F6BD9F9F2D170ECD008B920C /* OnboardingViewModel.swift */,
+				F6BD9F9D2D170EC7008B920C /* OnboardingModel.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		F6BD9FA62D171009008B920C /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +470,9 @@
 			files = (
 				F685F2A12D066DDB00090EBF /* ContentView.swift in Sources */,
 				F685F29F2D066DDB00090EBF /* KulturaApp.swift in Sources */,
+				F6BD9F9E2D170ECA008B920C /* OnboardingModel.swift in Sources */,
+				F6BD9FA22D170EDB008B920C /* OnboardingView.swift in Sources */,
+				F6BD9FA02D170ED4008B920C /* OnboardingViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,10 +635,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Kultura/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Kultura/Resources/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = FJ7F33948Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kultura/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -634,10 +665,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Kultura/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Kultura/Resources/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = FJ7F33948Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kultura/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
