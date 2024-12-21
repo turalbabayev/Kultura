@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    private let appCoordinator = AppCoordinator()
+    @StateObject private var appCoordinator = AppCoordinator()
     
     var body: some View {
         appCoordinator.start()
+            .onReceive(appCoordinator.$currentView) { newView in
+                // Ekranı güncellemek için dinamik olarak izleme
+            }
     }
 }
+
 

@@ -7,22 +7,43 @@
 
 import SwiftUI
 
-class AppCoordinator: Coordinator{
+import SwiftUI
+
+class AppCoordinator: ObservableObject, Coordinator {
     @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding: Bool = false
+    @Published private(set) var currentView: AnyView
     
-    func start() -> AnyView {
-        if hasSeenOnboarding{
-            print("Ana Sayfaya Yonlendirilecek")
-            return AnyView(LoginCoordinator().start())
-        }else{
-            return AnyView(OnboardingCoordinator{ [weak self] in
-                self?.completeOnboarding()
-            }.start())
+    init() {
+        self.currentView = AnyView(Text("Loading...")) // Geçici bir başlangıç değeri
+        if hasSeenOnboarding {
+            currentView = AnyView(LoginCoordinator().start())
+        } else {
+            currentView = AnyView(OnboardingCoordinator(
+                onLogin: { [weak self] in
+                    self?.navigateToLogin()
+                },
+                onSignup: { [weak self] in
+                    self?.navigateToSignup()
+                }
+            ).start())
         }
     }
     
-    private func completeOnboarding() {
-        hasSeenOnboarding = true
+    func start() -> AnyView {
+        return currentView
     }
-    
+
+    private func navigateToLogin() {
+        hasSeenOnboarding = true
+        currentView = AnyView(LoginCoordinator().start())
+    }
+
+    private func navigateToSignup() {
+        hasSeenOnboarding = true
+        currentView = AnyView(SignupCoordinator().start())
+    }
 }
+
+
+
+

@@ -9,12 +9,17 @@ import SwiftUI
 
 struct OnboardingView: View {
     @StateObject private var viewModel = OnboardingViewModel()
-    var onFinish: () -> Void
-
-    init(onFinish: @escaping () -> Void = {}) {
-        self.onFinish = onFinish
+    @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding: Bool = false
+    
+    var onLogin: () -> Void
+    var onSignup: () -> Void
+    
+    init(onLogin: @escaping () -> Void, onSignup: @escaping () -> Void) {
+        self.onLogin = onLogin
+        self.onSignup = onSignup
         UIPageControl.appearance().isHidden = true
     }
+
     
     var body: some View {
         ZStack{
@@ -71,45 +76,42 @@ struct OnboardingView: View {
                 .tabViewStyle(PageTabViewStyle())
                 
                 HStack{
-                    Button {
-                        
-                    } label: {
-                        Text("Log in")
-                            .padding(16)
-                            .frame(maxWidth: .infinity)
-                            .background(.white)
-                            .cornerRadius(70)
-                            .foregroundStyle(.black)
-                            .overlay {
-                                RoundedRectangle(cornerRadius: 70)
-                                    .stroke(.gray, lineWidth: 0.5)
-                            }
-                        
-                        
+                    CustomButton(title: "Log in",
+                                 action: { onLogin() },
+                                 backgroundColor: .white,
+                                 foregroundColor: .black,
+                                 cornerRadius: 70)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 70)
+                            .stroke(.gray, lineWidth: 0.5)
                     }
                     
-                    Button {
-                        
-                    } label: {
-                        Text("Sign up")
-                            .padding(16)
-                            .frame(maxWidth: .infinity)
-                            .background(.purple).opacity(0.8)
-                            .cornerRadius(70)
-                            .foregroundStyle(.black)
-                            
-                    }
-
+                    CustomButton(title: "Sign up",
+                                 action: { onSignup() },
+                                 backgroundColor: .purple.opacity(0.8),
+                                 foregroundColor: .black,
+                                 cornerRadius: 70)
                 }
                 .padding(32)
-
             }
         }
-       
+        .onAppear {
+            hasSeenOnboarding = true
+        }
+        
     }
+        
 }
 
 #Preview {
-    OnboardingView()
+    OnboardingView(
+        onLogin: {
+            print("Log in button tapped")
+        },
+        onSignup: {
+            print("Sign up button tapped")
+        }
+    )
 }
+
 
