@@ -17,6 +17,30 @@
 		F6BD9F9E2D170ECA008B920C /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9F9D2D170EC7008B920C /* OnboardingModel.swift */; };
 		F6BD9FA02D170ED4008B920C /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9F9F2D170ECD008B920C /* OnboardingViewModel.swift */; };
 		F6BD9FA22D170EDB008B920C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9FA12D170ED8008B920C /* OnboardingView.swift */; };
+		F6BD9FBB2D1710D1008B920C /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6BD9FB42D1710D1008B920C /* Poppins-MediumItalic.ttf */; };
+		F6BD9FBC2D1710D1008B920C /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6BD9FA92D1710D1008B920C /* Poppins-BlackItalic.ttf */; };
+		F6BD9FBD2D1710D1008B920C /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6BD9FB22D1710D1008B920C /* Poppins-LightItalic.ttf */; };
+		F6BD9FBE2D1710D1008B920C /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6BD9FAD2D1710D1008B920C /* Poppins-ExtraBoldItalic.ttf */; };
+		F6BD9FBF2D1710D1008B920C /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6BD9FB72D1710D1008B920C /* Poppins-SemiBoldItalic.ttf */; };
+		F6BD9FC02D1710D1008B920C /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6BD9FAB2D1710D1008B920C /* Poppins-BoldItalic.ttf */; };
+		F6BD9FC12D1710D1008B920C /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6BD9FAA2D1710D1008B920C /* Poppins-Bold.ttf */; };
+		F6BD9FC22D1710D1008B920C /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6BD9FB02D1710D1008B920C /* Poppins-Italic.ttf */; };
+		F6BD9FC32D1710D1008B920C /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6BD9FAC2D1710D1008B920C /* Poppins-ExtraBold.ttf */; };
+		F6BD9FC42D1710D1008B920C /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6BD9FB52D1710D1008B920C /* Poppins-Regular.ttf */; };
+		F6BD9FC52D1710D1008B920C /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6BD9FB12D1710D1008B920C /* Poppins-Light.ttf */; };
+		F6BD9FC62D1710D1008B920C /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6BD9FB62D1710D1008B920C /* Poppins-SemiBold.ttf */; };
+		F6BD9FC72D1710D1008B920C /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6BD9FB32D1710D1008B920C /* Poppins-Medium.ttf */; };
+		F6BD9FC82D1710D1008B920C /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6BD9FAF2D1710D1008B920C /* Poppins-ExtraLightItalic.ttf */; };
+		F6BD9FC92D1710D1008B920C /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6BD9FB82D1710D1008B920C /* Poppins-Thin.ttf */; };
+		F6BD9FCA2D1710D1008B920C /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6BD9FA72D1710D1008B920C /* OFL.txt */; };
+		F6BD9FCB2D1710D1008B920C /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6BD9FB92D1710D1008B920C /* Poppins-ThinItalic.ttf */; };
+		F6BD9FCC2D1710D1008B920C /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6BD9FAE2D1710D1008B920C /* Poppins-ExtraLight.ttf */; };
+		F6BD9FCD2D1710D1008B920C /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6BD9FA82D1710D1008B920C /* Poppins-Black.ttf */; };
+		F6BD9FD12D172C46008B920C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9FD02D172C45008B920C /* AppCoordinator.swift */; };
+		F6BD9FD42D172C7D008B920C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9FD32D172C79008B920C /* Coordinator.swift */; };
+		F6BD9FD62D172D3E008B920C /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9FD52D172D3D008B920C /* OnboardingCoordinator.swift */; };
+		F6BD9FD92D172FE6008B920C /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9FD82D172FDE008B920C /* LoginCoordinator.swift */; };
+		F6BD9FDB2D17300E008B920C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9FDA2D173008008B920C /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +75,30 @@
 		F6BD9F9F2D170ECD008B920C /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		F6BD9FA12D170ED8008B920C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		F6BD9FA52D170FF5008B920C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6BD9FA72D1710D1008B920C /* OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		F6BD9FA82D1710D1008B920C /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		F6BD9FA92D1710D1008B920C /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		F6BD9FAA2D1710D1008B920C /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		F6BD9FAB2D1710D1008B920C /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F6BD9FAC2D1710D1008B920C /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		F6BD9FAD2D1710D1008B920C /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		F6BD9FAE2D1710D1008B920C /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		F6BD9FAF2D1710D1008B920C /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		F6BD9FB02D1710D1008B920C /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		F6BD9FB12D1710D1008B920C /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		F6BD9FB22D1710D1008B920C /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		F6BD9FB32D1710D1008B920C /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		F6BD9FB42D1710D1008B920C /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		F6BD9FB52D1710D1008B920C /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		F6BD9FB62D1710D1008B920C /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		F6BD9FB72D1710D1008B920C /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		F6BD9FB82D1710D1008B920C /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		F6BD9FB92D1710D1008B920C /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		F6BD9FD02D172C45008B920C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F6BD9FD32D172C79008B920C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F6BD9FD52D172D3D008B920C /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		F6BD9FD82D172FDE008B920C /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		F6BD9FDA2D173008008B920C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +190,7 @@
 		F685F2C82D066EF400090EBF /* App */ = {
 			isa = PBXGroup;
 			children = (
+				F6BD9FD02D172C45008B920C /* AppCoordinator.swift */,
 				F685F2A02D066DDB00090EBF /* ContentView.swift */,
 				F685F29E2D066DDB00090EBF /* KulturaApp.swift */,
 			);
@@ -151,6 +200,7 @@
 		F685F2C92D066EFA00090EBF /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				F6BD9FD22D172C6B008B920C /* Protocols */,
 				F685F2D32D066FE400090EBF /* Models */,
 				F685F2D42D066FEB00090EBF /* ViewModels */,
 				F685F2D52D066FF200090EBF /* Services */,
@@ -164,6 +214,7 @@
 		F685F2CA2D066EFF00090EBF /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F6BD9FD72D172FCD008B920C /* Login */,
 				F6BD9F9C2D170EAB008B920C /* Onboarding */,
 			);
 			path = Features;
@@ -189,7 +240,7 @@
 		F685F2CD2D066F1B00090EBF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F6BD9FA62D171009008B920C /* New Group */,
+				F6BD9FA62D171009008B920C /* Fonts */,
 				F685F2D02D066F7400090EBF /* Assets */,
 				F685F2D12D066F7B00090EBF /* Localization */,
 				F685F2D22D066F8100090EBF /* Themes */,
@@ -324,6 +375,7 @@
 		F6BD9F9C2D170EAB008B920C /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				F6BD9FD52D172D3D008B920C /* OnboardingCoordinator.swift */,
 				F6BD9FA12D170ED8008B920C /* OnboardingView.swift */,
 				F6BD9F9F2D170ECD008B920C /* OnboardingViewModel.swift */,
 				F6BD9F9D2D170EC7008B920C /* OnboardingModel.swift */,
@@ -331,11 +383,55 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		F6BD9FA62D171009008B920C /* New Group */ = {
+		F6BD9FA62D171009008B920C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				F6BD9FBA2D1710D1008B920C /* Poppins */,
 			);
-			path = "New Group";
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F6BD9FBA2D1710D1008B920C /* Poppins */ = {
+			isa = PBXGroup;
+			children = (
+				F6BD9FA72D1710D1008B920C /* OFL.txt */,
+				F6BD9FA82D1710D1008B920C /* Poppins-Black.ttf */,
+				F6BD9FA92D1710D1008B920C /* Poppins-BlackItalic.ttf */,
+				F6BD9FAA2D1710D1008B920C /* Poppins-Bold.ttf */,
+				F6BD9FAB2D1710D1008B920C /* Poppins-BoldItalic.ttf */,
+				F6BD9FAC2D1710D1008B920C /* Poppins-ExtraBold.ttf */,
+				F6BD9FAD2D1710D1008B920C /* Poppins-ExtraBoldItalic.ttf */,
+				F6BD9FAE2D1710D1008B920C /* Poppins-ExtraLight.ttf */,
+				F6BD9FAF2D1710D1008B920C /* Poppins-ExtraLightItalic.ttf */,
+				F6BD9FB02D1710D1008B920C /* Poppins-Italic.ttf */,
+				F6BD9FB12D1710D1008B920C /* Poppins-Light.ttf */,
+				F6BD9FB22D1710D1008B920C /* Poppins-LightItalic.ttf */,
+				F6BD9FB32D1710D1008B920C /* Poppins-Medium.ttf */,
+				F6BD9FB42D1710D1008B920C /* Poppins-MediumItalic.ttf */,
+				F6BD9FB52D1710D1008B920C /* Poppins-Regular.ttf */,
+				F6BD9FB62D1710D1008B920C /* Poppins-SemiBold.ttf */,
+				F6BD9FB72D1710D1008B920C /* Poppins-SemiBoldItalic.ttf */,
+				F6BD9FB82D1710D1008B920C /* Poppins-Thin.ttf */,
+				F6BD9FB92D1710D1008B920C /* Poppins-ThinItalic.ttf */,
+			);
+			path = Poppins;
+			sourceTree = "<group>";
+		};
+		F6BD9FD22D172C6B008B920C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F6BD9FD32D172C79008B920C /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F6BD9FD72D172FCD008B920C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F6BD9FDA2D173008008B920C /* LoginView.swift */,
+				F6BD9FD82D172FDE008B920C /* LoginCoordinator.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,6 +540,25 @@
 			files = (
 				F685F2A62D066DDD00090EBF /* Preview Assets.xcassets in Resources */,
 				F685F2A32D066DDD00090EBF /* Assets.xcassets in Resources */,
+				F6BD9FBB2D1710D1008B920C /* Poppins-MediumItalic.ttf in Resources */,
+				F6BD9FBC2D1710D1008B920C /* Poppins-BlackItalic.ttf in Resources */,
+				F6BD9FBD2D1710D1008B920C /* Poppins-LightItalic.ttf in Resources */,
+				F6BD9FBE2D1710D1008B920C /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				F6BD9FBF2D1710D1008B920C /* Poppins-SemiBoldItalic.ttf in Resources */,
+				F6BD9FC02D1710D1008B920C /* Poppins-BoldItalic.ttf in Resources */,
+				F6BD9FC12D1710D1008B920C /* Poppins-Bold.ttf in Resources */,
+				F6BD9FC22D1710D1008B920C /* Poppins-Italic.ttf in Resources */,
+				F6BD9FC32D1710D1008B920C /* Poppins-ExtraBold.ttf in Resources */,
+				F6BD9FC42D1710D1008B920C /* Poppins-Regular.ttf in Resources */,
+				F6BD9FC52D1710D1008B920C /* Poppins-Light.ttf in Resources */,
+				F6BD9FC62D1710D1008B920C /* Poppins-SemiBold.ttf in Resources */,
+				F6BD9FC72D1710D1008B920C /* Poppins-Medium.ttf in Resources */,
+				F6BD9FC82D1710D1008B920C /* Poppins-ExtraLightItalic.ttf in Resources */,
+				F6BD9FC92D1710D1008B920C /* Poppins-Thin.ttf in Resources */,
+				F6BD9FCA2D1710D1008B920C /* OFL.txt in Resources */,
+				F6BD9FCB2D1710D1008B920C /* Poppins-ThinItalic.ttf in Resources */,
+				F6BD9FCC2D1710D1008B920C /* Poppins-ExtraLight.ttf in Resources */,
+				F6BD9FCD2D1710D1008B920C /* Poppins-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,11 +583,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6BD9FD12D172C46008B920C /* AppCoordinator.swift in Sources */,
 				F685F2A12D066DDB00090EBF /* ContentView.swift in Sources */,
 				F685F29F2D066DDB00090EBF /* KulturaApp.swift in Sources */,
 				F6BD9F9E2D170ECA008B920C /* OnboardingModel.swift in Sources */,
 				F6BD9FA22D170EDB008B920C /* OnboardingView.swift in Sources */,
+				F6BD9FD62D172D3E008B920C /* OnboardingCoordinator.swift in Sources */,
+				F6BD9FD92D172FE6008B920C /* LoginCoordinator.swift in Sources */,
 				F6BD9FA02D170ED4008B920C /* OnboardingViewModel.swift in Sources */,
+				F6BD9FDB2D17300E008B920C /* LoginView.swift in Sources */,
+				F6BD9FD42D172C7D008B920C /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
