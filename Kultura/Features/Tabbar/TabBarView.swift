@@ -20,7 +20,7 @@ struct TabBarView: View {
                 case .map:
                     Text("Map")
                 case .profile:
-                    Text("Profile")
+                    ProfileView()
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
