@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F63972D62D1849FB00107557 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63972D52D1849F700107557 /* TabBarView.swift */; };
+		F63972D82D184B5100107557 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63972D72D184B4E00107557 /* TabBarItem.swift */; };
+		F63972DB2D184DDF00107557 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63972DA2D184DDD00107557 /* HomeView.swift */; };
+		F63972DF2D18637500107557 /* KulturaSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63972DE2D18636F00107557 /* KulturaSearchTextField.swift */; };
 		F646787E2D178C3F00EBCBCA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646787D2D178C3B00EBCBCA /* LoginViewModel.swift */; };
 		F64678802D178E4F00EBCBCA /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646787F2D178E4800EBCBCA /* KeyboardManager.swift */; };
 		F64678822D17929C00EBCBCA /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64678812D17929B00EBCBCA /* GradientBackground.swift */; };
@@ -72,6 +76,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F63972D52D1849F700107557 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		F63972D72D184B4E00107557 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		F63972DA2D184DDD00107557 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F63972DE2D18636F00107557 /* KulturaSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturaSearchTextField.swift; sourceTree = "<group>"; };
 		F646787D2D178C3B00EBCBCA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		F646787F2D178E4800EBCBCA /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		F64678812D17929B00EBCBCA /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
@@ -148,6 +156,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F63972D42D1849EF00107557 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				F63972D72D184B4E00107557 /* TabBarItem.swift */,
+				F63972D52D1849F700107557 /* TabBarView.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		F63972D92D184DD900107557 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F63972DA2D184DDD00107557 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		F685F2922D066DDB00090EBF = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +262,8 @@
 		F685F2CA2D066EFF00090EBF /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F63972D92D184DD900107557 /* Home */,
+				F63972D42D1849EF00107557 /* Tabbar */,
 				F6BD9FDC2D173527008B920C /* Signup */,
 				F6BD9FD72D172FCD008B920C /* Login */,
 				F6BD9F9C2D170EAB008B920C /* Onboarding */,
@@ -475,6 +502,7 @@
 		F6BD9FE12D173D67008B920C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F63972DE2D18636F00107557 /* KulturaSearchTextField.swift */,
 				F64678852D179AAD00EBCBCA /* SocialButton.swift */,
 				F64678812D17929B00EBCBCA /* GradientBackground.swift */,
 				F6BD9FE72D17644C008B920C /* CustomTextField.swift */,
@@ -645,6 +673,8 @@
 				F6BD9FE62D176251008B920C /* AppFonts.swift in Sources */,
 				F64678882D179FB800EBCBCA /* SignupViewModel.swift in Sources */,
 				F64678802D178E4F00EBCBCA /* KeyboardManager.swift in Sources */,
+				F63972DF2D18637500107557 /* KulturaSearchTextField.swift in Sources */,
+				F63972D82D184B5100107557 /* TabBarItem.swift in Sources */,
 				F685F2A12D066DDB00090EBF /* ContentView.swift in Sources */,
 				F646787E2D178C3F00EBCBCA /* LoginViewModel.swift in Sources */,
 				F685F29F2D066DDB00090EBF /* KulturaApp.swift in Sources */,
@@ -652,6 +682,7 @@
 				F6BD9FE02D17354C008B920C /* SignupCoordinator.swift in Sources */,
 				F6BD9FA22D170EDB008B920C /* OnboardingView.swift in Sources */,
 				F6BD9FD62D172D3E008B920C /* OnboardingCoordinator.swift in Sources */,
+				F63972D62D1849FB00107557 /* TabBarView.swift in Sources */,
 				F6BD9FD92D172FE6008B920C /* LoginCoordinator.swift in Sources */,
 				F64678862D179AB200EBCBCA /* SocialButton.swift in Sources */,
 				F6BD9FA02D170ED4008B920C /* OnboardingViewModel.swift in Sources */,
@@ -659,6 +690,7 @@
 				F64678822D17929C00EBCBCA /* GradientBackground.swift in Sources */,
 				F6BD9FDB2D17300E008B920C /* LoginView.swift in Sources */,
 				F6BD9FDE2D17353E008B920C /* SignupView.swift in Sources */,
+				F63972DB2D184DDF00107557 /* HomeView.swift in Sources */,
 				F6BD9FD42D172C7D008B920C /* Coordinator.swift in Sources */,
 				F6BD9FE82D176450008B920C /* CustomTextField.swift in Sources */,
 			);
