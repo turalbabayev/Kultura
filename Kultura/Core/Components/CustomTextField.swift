@@ -5,33 +5,64 @@
 //  Created by Tural Babayev on 22.12.2024.
 //
 
+//
+//  CustomTextField.swift
+//  Kultura
+//
+//  Created by Tural Babayev on 22.12.2024.
+//
+
 import SwiftUI
 
-struct CustomTextField: View {
-    var placeholder: String
-    @Binding var text: String
-    var isSecure: Bool = false
+struct CustomTextFieldData {
+    let placeholder: String
+    var text: Binding<String>
+    let isSecure: Bool
+}
+
+struct CustomTextFieldView: View {
+    let fields: [CustomTextFieldData]
     
     var body: some View {
-        ZStack(alignment: .leading) {
-            if text.isEmpty {
-                Text(placeholder)
-                    .foregroundColor(.gray)
-                    .padding(.leading, 10)
-            }
-            
-            if isSecure {
-                SecureField("Password", text: $text)
-                    .padding(20)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(24)
-            } else {
-                TextField("", text: $text)
-                    .padding(20)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(24)
+        VStack(spacing: 20) {
+            ForEach(fields.indices, id: \.self) { index in
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(Color("appLabelColor")) // Arka plan rengi
+                    .frame(height: 65)
+                    .overlay(
+                        Group {
+                            if fields[index].isSecure {
+                                SecureField(fields[index].placeholder, text: fields[index].text)
+                                    .autocapitalization(.none)
+                                    .disableAutocorrection(true)
+                                    .padding(.horizontal, 20)
+                                    .font(AppFonts.customFont(name: AppFonts.primaryFont, size: 16))
+                                    .foregroundColor(.black)
+                            } else {
+                                TextField(fields[index].placeholder, text: fields[index].text)
+                                    .autocapitalization(.none)
+                                    .disableAutocorrection(true)
+                                    .padding(.horizontal, 20)
+                                    .font(AppFonts.customFont(name: AppFonts.primaryFont, size: 16))
+                                    .foregroundColor(.black)
+                            }
+                        },
+                        alignment: .leading
+                    )
             }
         }
-        .frame(height: 65)
+        .padding(.horizontal, 16)
     }
 }
+
+#Preview {
+    return CustomTextFieldView(fields: [
+        CustomTextFieldData(placeholder: "Email", text: .constant(""), isSecure: false),
+        CustomTextFieldData(placeholder: "Password", text: .constant(""), isSecure: true),
+        CustomTextFieldData(placeholder: "Username", text: .constant(""), isSecure: false)
+    ])
+}
+
+
+
+

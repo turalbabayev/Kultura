@@ -91,6 +91,7 @@ struct OnboardingView: View {
                                  backgroundColor: .purple.opacity(0.8),
                                  foregroundColor: .black,
                                  cornerRadius: 70)
+                    
                 }
                 .padding(32)
             }

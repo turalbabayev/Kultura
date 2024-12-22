@@ -30,6 +30,7 @@ struct CustomButton: View {
             .frame(maxWidth: .infinity)
             .background(backgroundColor)
             .cornerRadius(cornerRadius)
+            .frame(height: 65)
         }
     }
 }

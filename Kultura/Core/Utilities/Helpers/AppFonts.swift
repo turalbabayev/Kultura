@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AppFonts {
+    static let primaryFont = "Poppins-Regular"
     static let title = Font.custom("Poppins-Medium", size: 20)
     
     // Dinamik font boyutları için bir yöntem
