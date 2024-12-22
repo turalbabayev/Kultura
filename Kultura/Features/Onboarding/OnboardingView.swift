@@ -23,9 +23,7 @@ struct OnboardingView: View {
     
     var body: some View {
         ZStack{
-                        
-            VStack{
-                
+            VStack(spacing:20){
                 HStack{
                     ForEach(0..<viewModel.pages.count, id: \.self){ index in
                         if index == viewModel.currentPage{
@@ -45,28 +43,39 @@ struct OnboardingView: View {
                 
                 
                 TabView(selection: $viewModel.currentPage) {
-                    ForEach(0..<viewModel.pages.count, id: \.self){ index in
-                        VStack{
+                    ForEach(0..<viewModel.pages.count, id: \.self) { index in
+                        VStack {
+                            // Başlık
                             Text(viewModel.pages[index].title)
-                                .font(Font.custom("Poppins-Medium", size: 20))
+                                .font(Font.custom("Poppins-Medium", size: 22)) // Yazı boyutunu biraz büyüttüm
                                 .multilineTextAlignment(.center)
-                                .padding(.bottom, 16)
+                                .padding(.bottom, 30)
                             
+                            // Görsel ve Glow Efekti
                             ZStack {
-                                // Resim arkasındaki "Glow" efekti
+                                // Glow Efekti
                                 Circle()
-                                    .fill(LinearGradient(
-                                        gradient: Gradient(colors: [Color.purple.opacity(2), Color.purple.opacity(0.5)]),
-                                        startPoint: .top,
-                                        endPoint: .bottom
-                                    ))
-                                    .frame(width: 300, height: 300)
-                                    .blur(radius: 100)
+                                    .fill(
+                                        LinearGradient(
+                                            gradient: Gradient(colors: [Color.purple.opacity(0.2), Color.purple.opacity(0.1)]),
+                                            startPoint: .top,
+                                            endPoint: .bottom
+                                        )
+                                    )
+                                    .frame(
+                                        width: UIScreen.main.bounds.width * 0.9, // Daha büyük glow
+                                        height: UIScreen.main.bounds.width * 0.9
+                                    )
+                                    .blur(radius: 60) // Glow etkisini artırdım
                                 
+                                // Görsel
                                 Image(viewModel.pages[index].imageName)
                                     .resizable()
                                     .scaledToFit()
-                                    .frame(width: 220, height: 460)
+                                    .frame(
+                                        width: UIScreen.main.bounds.width * 0.65, // Görsel genişliğini artırdım
+                                        height: UIScreen.main.bounds.height * 0.4 // Görsel yüksekliğini artırdım
+                                    )
                                     .cornerRadius(20)
                             }
                         }
@@ -74,32 +83,42 @@ struct OnboardingView: View {
                     }
                 }
                 .tabViewStyle(PageTabViewStyle())
+
+
                 
-                HStack{
-                    CustomButton(title: "Log in",
-                                 action: { onLogin() },
-                                 backgroundColor: .white,
-                                 foregroundColor: .black,
-                                 cornerRadius: 70)
+                HStack(alignment: .center) {
+                    CustomButton(
+                        title: "Log in",
+                        action: { onLogin() },
+                        backgroundColor: .white,
+                        foregroundColor: .black,
+                        cornerRadius: 70
+                    )
+                    .frame(height: 50)
                     .overlay {
                         RoundedRectangle(cornerRadius: 70)
                             .stroke(.gray, lineWidth: 0.5)
                     }
                     
-                    CustomButton(title: "Sign up",
-                                 action: { onSignup() },
-                                 backgroundColor: .purple.opacity(0.8),
-                                 foregroundColor: .black,
-                                 cornerRadius: 70)
-                    
+                    CustomButton(
+                        title: "Sign up",
+                        action: { onSignup() },
+                        backgroundColor: .purple.opacity(0.8),
+                        foregroundColor: .black,
+                        cornerRadius: 70
+                    )
+                    .frame(height: 50)
                 }
                 .padding(32)
+                .alignmentGuide(.bottom) { $0[.bottom] }
+
             }
         }
         .onAppear {
             hasSeenOnboarding = true
         }
         
+    
     }
         
 }
