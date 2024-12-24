@@ -61,6 +61,9 @@
 		F6BD9FE32D173D7D008B920C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9FE22D173D7C008B920C /* CustomButton.swift */; };
 		F6BD9FE62D176251008B920C /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9FE52D176244008B920C /* AppFonts.swift */; };
 		F6BD9FE82D176450008B920C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9FE72D17644C008B920C /* CustomTextField.swift */; };
+		F6D029322D19F39D003A53F6 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D029312D19F39A003A53F6 /* ListItem.swift */; };
+		F6D029342D19F426003A53F6 /* CustomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D029332D19F423003A53F6 /* CustomListView.swift */; };
+		F6D029362D1AF57A003A53F6 /* CustomRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D029352D1AF576003A53F6 /* CustomRestaurantView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +142,9 @@
 		F6BD9FE22D173D7C008B920C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		F6BD9FE52D176244008B920C /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 		F6BD9FE72D17644C008B920C /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		F6D029312D19F39A003A53F6 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		F6D029332D19F423003A53F6 /* CustomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListView.swift; sourceTree = "<group>"; };
+		F6D029352D1AF576003A53F6 /* CustomRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRestaurantView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,6 +378,7 @@
 		F685F2D32D066FE400090EBF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F6D029312D19F39A003A53F6 /* ListItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -532,6 +539,8 @@
 		F6BD9FE12D173D67008B920C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F6D029352D1AF576003A53F6 /* CustomRestaurantView.swift */,
+				F6D029332D19F423003A53F6 /* CustomListView.swift */,
 				F63972E22D18741100107557 /* HomeRestaurantCardView.swift */,
 				F63972DE2D18636F00107557 /* KulturaSearchTextField.swift */,
 				F64678852D179AAD00EBCBCA /* SocialButton.swift */,
@@ -700,7 +709,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F63972EB2D188E1300107557 /* EditProfileView.swift in Sources */,
+				F6D029342D19F426003A53F6 /* CustomListView.swift in Sources */,
 				F6BD9FE32D173D7D008B920C /* CustomButton.swift in Sources */,
+				F6D029362D1AF57A003A53F6 /* CustomRestaurantView.swift in Sources */,
 				F6BD9FD12D172C46008B920C /* AppCoordinator.swift in Sources */,
 				F6BD9FE62D176251008B920C /* AppFonts.swift in Sources */,
 				F64678882D179FB800EBCBCA /* SignupViewModel.swift in Sources */,
@@ -725,6 +736,7 @@
 				F64678822D17929C00EBCBCA /* GradientBackground.swift in Sources */,
 				F6BD9FDB2D17300E008B920C /* LoginView.swift in Sources */,
 				F6BD9FDE2D17353E008B920C /* SignupView.swift in Sources */,
+				F6D029322D19F39D003A53F6 /* ListItem.swift in Sources */,
 				F63972DB2D184DDF00107557 /* HomeView.swift in Sources */,
 				F63972E32D18743200107557 /* HomeRestaurantCardView.swift in Sources */,
 				F6BD9FD42D172C7D008B920C /* Coordinator.swift in Sources */,

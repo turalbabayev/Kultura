@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        NavigationStack{
+        NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16){
                     HStack{
@@ -68,6 +68,7 @@ struct HomeView: View {
             .padding(.top, 20)
             .background(Color("appSecondary"))
         }
+        .navigationBarBackButtonHidden(true)
         
     }
 }
