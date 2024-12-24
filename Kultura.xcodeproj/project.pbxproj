@@ -70,6 +70,7 @@
 		F6D029402D1B2273003A53F6 /* TabContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D0293F2D1B2271003A53F6 /* TabContentView.swift */; };
 		F6D029422D1B255D003A53F6 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D029412D1B255A003A53F6 /* ContactView.swift */; };
 		F6D029442D1B28FE003A53F6 /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D029432D1B28FA003A53F6 /* ReviewsView.swift */; };
+		F6D029472D1B4C05003A53F6 /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D029462D1B4C03003A53F6 /* TicketView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +158,7 @@
 		F6D0293F2D1B2271003A53F6 /* TabContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContentView.swift; sourceTree = "<group>"; };
 		F6D029412D1B255A003A53F6 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		F6D029432D1B28FA003A53F6 /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
+		F6D029462D1B4C03003A53F6 /* TicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +310,7 @@
 		F685F2CA2D066EFF00090EBF /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F6D029452D1B4BF9003A53F6 /* Ticket */,
 				F6D0293A2D1B146E003A53F6 /* RestaurantDetail */,
 				F6D029372D1B0A6A003A53F6 /* Favorites */,
 				F63972E92D188DFD00107557 /* EditProfile */,
@@ -593,6 +596,14 @@
 			path = RestaurantDetail;
 			sourceTree = "<group>";
 		};
+		F6D029452D1B4BF9003A53F6 /* Ticket */ = {
+			isa = PBXGroup;
+			children = (
+				F6D029462D1B4C03003A53F6 /* TicketView.swift */,
+			);
+			path = Ticket;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -768,6 +779,7 @@
 				F6BD9FD62D172D3E008B920C /* OnboardingCoordinator.swift in Sources */,
 				F63972D62D1849FB00107557 /* TabBarView.swift in Sources */,
 				F6BD9FD92D172FE6008B920C /* LoginCoordinator.swift in Sources */,
+				F6D029472D1B4C05003A53F6 /* TicketView.swift in Sources */,
 				F64678862D179AB200EBCBCA /* SocialButton.swift in Sources */,
 				F6BD9FA02D170ED4008B920C /* OnboardingViewModel.swift in Sources */,
 				F64678842D179A7800EBCBCA /* LoginConstants.swift in Sources */,
