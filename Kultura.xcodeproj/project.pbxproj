@@ -64,6 +64,9 @@
 		F6D029322D19F39D003A53F6 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D029312D19F39A003A53F6 /* ListItem.swift */; };
 		F6D029342D19F426003A53F6 /* CustomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D029332D19F423003A53F6 /* CustomListView.swift */; };
 		F6D029362D1AF57A003A53F6 /* CustomRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D029352D1AF576003A53F6 /* CustomRestaurantView.swift */; };
+		F6D029392D1B0A7B003A53F6 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D029382D1B0A77003A53F6 /* FavoritesView.swift */; };
+		F6D0293C2D1B1478003A53F6 /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D0293B2D1B1476003A53F6 /* RestaurantDetailView.swift */; };
+		F6D0293E2D1B1581003A53F6 /* RestaurantTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D0293D2D1B157F003A53F6 /* RestaurantTab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +148,9 @@
 		F6D029312D19F39A003A53F6 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		F6D029332D19F423003A53F6 /* CustomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListView.swift; sourceTree = "<group>"; };
 		F6D029352D1AF576003A53F6 /* CustomRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRestaurantView.swift; sourceTree = "<group>"; };
+		F6D029382D1B0A77003A53F6 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		F6D0293B2D1B1476003A53F6 /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
+		F6D0293D2D1B157F003A53F6 /* RestaurantTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTab.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +302,8 @@
 		F685F2CA2D066EFF00090EBF /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F6D0293A2D1B146E003A53F6 /* RestaurantDetail */,
+				F6D029372D1B0A6A003A53F6 /* Favorites */,
 				F63972E92D188DFD00107557 /* EditProfile */,
 				F63972E42D18833F00107557 /* Profile */,
 				F63972D92D184DD900107557 /* Home */,
@@ -417,6 +425,7 @@
 		F685F2D82D06700300090EBF /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				F6D0293D2D1B157F003A53F6 /* RestaurantTab.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -557,6 +566,22 @@
 				F6BD9FE52D176244008B920C /* AppFonts.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F6D029372D1B0A6A003A53F6 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				F6D029382D1B0A77003A53F6 /* FavoritesView.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		F6D0293A2D1B146E003A53F6 /* RestaurantDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F6D0293B2D1B1476003A53F6 /* RestaurantDetailView.swift */,
+			);
+			path = RestaurantDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -709,6 +734,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F63972EB2D188E1300107557 /* EditProfileView.swift in Sources */,
+				F6D0293C2D1B1478003A53F6 /* RestaurantDetailView.swift in Sources */,
 				F6D029342D19F426003A53F6 /* CustomListView.swift in Sources */,
 				F6BD9FE32D173D7D008B920C /* CustomButton.swift in Sources */,
 				F6D029362D1AF57A003A53F6 /* CustomRestaurantView.swift in Sources */,
@@ -725,6 +751,7 @@
 				F6BD9F9E2D170ECA008B920C /* OnboardingModel.swift in Sources */,
 				F63972E62D18834A00107557 /* ProfileView.swift in Sources */,
 				F6BD9FE02D17354C008B920C /* SignupCoordinator.swift in Sources */,
+				F6D0293E2D1B1581003A53F6 /* RestaurantTab.swift in Sources */,
 				F6BD9FA22D170EDB008B920C /* OnboardingView.swift in Sources */,
 				F63972E82D188C7600107557 /* ProfileHeaderView.swift in Sources */,
 				F6BD9FD62D172D3E008B920C /* OnboardingCoordinator.swift in Sources */,
@@ -738,6 +765,7 @@
 				F6BD9FDE2D17353E008B920C /* SignupView.swift in Sources */,
 				F6D029322D19F39D003A53F6 /* ListItem.swift in Sources */,
 				F63972DB2D184DDF00107557 /* HomeView.swift in Sources */,
+				F6D029392D1B0A7B003A53F6 /* FavoritesView.swift in Sources */,
 				F63972E32D18743200107557 /* HomeRestaurantCardView.swift in Sources */,
 				F6BD9FD42D172C7D008B920C /* Coordinator.swift in Sources */,
 				F6BD9FE82D176450008B920C /* CustomTextField.swift in Sources */,

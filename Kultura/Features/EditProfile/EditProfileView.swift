@@ -94,7 +94,7 @@ struct EditProfileView: View {
                         ToolbarItem(placement: .navigationBarLeading) {
                             Button(action: {
                                 // Geri butonuna tıklama işlemi
-                                dismiss() // "Done" butonuna tıklayınca da geri dön
+                                dismiss()
                             }) {
                                 Image("arrow-left")
                                     .frame(width: 24, height: 24)

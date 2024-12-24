@@ -22,7 +22,28 @@ struct ProfileView: View {
                                 ListItem(title: "Reservations", destination: AnyView(EditProfileView(firstName: "Tural", lastName: "Babayev", email: "turalbabayev@gmail.com", profileImage: "avatar", onDone: { _, _, _ in
                                     
                                 }))),
-                                ListItem(title: "Favorites", destination: AnyView(HomeView()))
+                                ListItem(title: "Favorites", destination: AnyView(FavoritesView(restaurants: [
+                                    Restaurant(
+                                        name: "Agabala Restaurant",
+                                        rating: 5.0,
+                                        priceRange: "120-150 AZN",
+                                        image: Image("r1"),
+                                        leftIcon: .none,
+                                        rightIcon: Image("heart"),
+                                        leftIconColor: .none,
+                                        hasBorder: false // Border yok
+                                    ),
+                                    Restaurant(
+                                        name: "Coffelea Khatai",
+                                        rating: 4.3,
+                                        priceRange: "30-40 AZN",
+                                        image: Image("r1"),
+                                        leftIcon: .none,
+                                        rightIcon: Image("heart"),
+                                        leftIconColor: .red,
+                                        hasBorder: false // Border var
+                                    )
+                                ])))
                             ]
                     )
                     
