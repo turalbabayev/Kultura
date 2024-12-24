@@ -71,6 +71,7 @@
 		F6D029422D1B255D003A53F6 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D029412D1B255A003A53F6 /* ContactView.swift */; };
 		F6D029442D1B28FE003A53F6 /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D029432D1B28FA003A53F6 /* ReviewsView.swift */; };
 		F6D029472D1B4C05003A53F6 /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D029462D1B4C03003A53F6 /* TicketView.swift */; };
+		F6D0294A2D1B5096003A53F6 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D029492D1B5093003A53F6 /* AccountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +160,7 @@
 		F6D029412D1B255A003A53F6 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		F6D029432D1B28FA003A53F6 /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
 		F6D029462D1B4C03003A53F6 /* TicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
+		F6D029492D1B5093003A53F6 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +312,7 @@
 		F685F2CA2D066EFF00090EBF /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F6D029482D1B508E003A53F6 /* Account */,
 				F6D029452D1B4BF9003A53F6 /* Ticket */,
 				F6D0293A2D1B146E003A53F6 /* RestaurantDetail */,
 				F6D029372D1B0A6A003A53F6 /* Favorites */,
@@ -604,6 +607,14 @@
 			path = Ticket;
 			sourceTree = "<group>";
 		};
+		F6D029482D1B508E003A53F6 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				F6D029492D1B5093003A53F6 /* AccountView.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -766,6 +777,7 @@
 				F63972D82D184B5100107557 /* TabBarItem.swift in Sources */,
 				F685F2A12D066DDB00090EBF /* ContentView.swift in Sources */,
 				F63972E12D18733F00107557 /* SectionView.swift in Sources */,
+				F6D0294A2D1B5096003A53F6 /* AccountView.swift in Sources */,
 				F646787E2D178C3F00EBCBCA /* LoginViewModel.swift in Sources */,
 				F685F29F2D066DDB00090EBF /* KulturaApp.swift in Sources */,
 				F6D029402D1B2273003A53F6 /* TabContentView.swift in Sources */,
