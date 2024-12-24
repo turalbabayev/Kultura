@@ -83,11 +83,94 @@ struct RestaurantDetailView: View {
                             .padding(.trailing, 16)
                     }
                     .padding(.top, 160)
-
                 }
                 
                 
+                VStack(alignment: .leading, spacing: 8){
+                    HStack{
+                        Text("Popular")
+                            .font(.subheadline)
+                            .padding(8)
+                            .background(Color.gray.opacity(0.2))
+                            .cornerRadius(24)
+
+                        Spacer()
+                        
+                        Text("⭐️ 5.0 (45 Reviews)")
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
+                    
+                    HStack{
+                        Text("Coffemania Narimanov")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                    }
+                    
+                    VStack {
+                        Text("⏰ Open until: 22:00")
+                        Text("💰 Average Price: 30-40 AZN")
+                        Text("🍴 Cuisine: Turkish")
+                    }
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+                    
+                }
+                .padding()
+                .background(Color("appSecondary"))
+                .cornerRadius(16)
+                .padding(.top, -16)
+                
+                // Tab Seçimi
+                HStack(spacing: 16) {
+                    ForEach(RestaurantTab.allCases, id: \.self) { tab in
+                        Button(action: {
+                            selectedTab = tab
+                        }) {
+                            Text(tab.rawValue)
+                                .font(AppFonts.customFont(name: "Poppins", size: 14))
+                                .padding(.vertical, 2)
+                                .padding(.horizontal, 16)
+                                .background(selectedTab == tab ? Color.gray : Color.clear)
+                                .cornerRadius(16)
+                                .foregroundColor(selectedTab == tab ? Color.white : Color.gray)
+                                .overlay {
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .stroke(.gray, lineWidth: 0.5)
+                                }
+                        }
+                    }
+                }
+                .background(Color("appSecondary"))
+                .padding(.horizontal)
+                
+                Divider()
+                    .padding(.vertical, 16)
+                
+                Spacer()
+
+                TabContentView(selectedTab: selectedTab)
+                
+                // Alt buton
+                ZStack{
+                    Button(action: {
+                        print("Reserve a table tapped")
+                    }) {
+                        Text("Reserve a table")
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.gray.opacity(0.2))
+                            .cornerRadius(16)
+                            .foregroundColor(.black)
+                            .padding(.horizontal)
+                    }
+                    .padding(.vertical, 16)
+                }
+                .background(.white)
+                .padding(.top, 16)
+                
             }
+            .background(Color("appSecondary"))
         }
     }
 }
