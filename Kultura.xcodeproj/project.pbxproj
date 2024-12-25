@@ -33,6 +33,7 @@
 		F6AEBEE32D1C95C0006945D0 /* Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AEBEE22D1C95BE006945D0 /* Availability.swift */; };
 		F6AEBEE62D1C9A22006945D0 /* ReservationDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AEBEE52D1C9A0E006945D0 /* ReservationDateView.swift */; };
 		F6AEBEE82D1CA5DB006945D0 /* Stepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AEBEE72D1CA5D5006945D0 /* Stepper.swift */; };
+		F6AEBEEA2D1CACCD006945D0 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AEBEE92D1CACC4006945D0 /* TimePicker.swift */; };
 		F6BD9F9E2D170ECA008B920C /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9F9D2D170EC7008B920C /* OnboardingModel.swift */; };
 		F6BD9FA02D170ED4008B920C /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9F9F2D170ECD008B920C /* OnboardingViewModel.swift */; };
 		F6BD9FA22D170EDB008B920C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9FA12D170ED8008B920C /* OnboardingView.swift */; };
@@ -125,6 +126,7 @@
 		F6AEBEE22D1C95BE006945D0 /* Availability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Availability.swift; sourceTree = "<group>"; };
 		F6AEBEE52D1C9A0E006945D0 /* ReservationDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationDateView.swift; sourceTree = "<group>"; };
 		F6AEBEE72D1CA5D5006945D0 /* Stepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stepper.swift; sourceTree = "<group>"; };
+		F6AEBEE92D1CACC4006945D0 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
 		F6BD9F9D2D170EC7008B920C /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		F6BD9F9F2D170ECD008B920C /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		F6BD9FA12D170ED8008B920C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -578,6 +580,7 @@
 		F6BD9FE12D173D67008B920C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F6AEBEE92D1CACC4006945D0 /* TimePicker.swift */,
 				F6AEBEE72D1CA5D5006945D0 /* Stepper.swift */,
 				F6AEBEE02D1C94DE006945D0 /* CustomDatePicker.swift */,
 				F6D029432D1B28FA003A53F6 /* ReviewsView.swift */,
@@ -794,6 +797,7 @@
 				F6AEBEE82D1CA5DB006945D0 /* Stepper.swift in Sources */,
 				F64678882D179FB800EBCBCA /* SignupViewModel.swift in Sources */,
 				F64678802D178E4F00EBCBCA /* KeyboardManager.swift in Sources */,
+				F6AEBEEA2D1CACCD006945D0 /* TimePicker.swift in Sources */,
 				F63972DF2D18637500107557 /* KulturaSearchTextField.swift in Sources */,
 				F63972D82D184B5100107557 /* TabBarItem.swift in Sources */,
 				F685F2A12D066DDB00090EBF /* ContentView.swift in Sources */,

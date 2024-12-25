@@ -10,6 +10,8 @@ import SwiftUI
 struct ReservationView: View {
     @State private var guestCount: Int = 1 // Başlangıç değeri
     @State private var selectedDate: Date? = nil // Seçilen tarih
+    @State private var selectedTime: String? = nil // Seçilen saat
+
     @Environment(\.dismiss) var dismiss
     
     let minGuests = 1
@@ -36,6 +38,9 @@ struct ReservationView: View {
                         
                         Text("Time")
                             .padding(.horizontal)
+                        
+                        TimePickerComponent(selectedTime: $selectedTime)
+
                         
                         if let selectedDate = selectedDate {
                             Text("Seçilen Tarih: \(formatDate(selectedDate)) ve Kisi Sayisi: \(guestCount)")

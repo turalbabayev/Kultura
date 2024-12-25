@@ -12,3 +12,10 @@ struct Availability {
     let isAvailable: Bool
 }
 
+struct TimeSlot: Identifiable {
+    let id = UUID()
+    let time: String
+    var isAvailable: Bool
+}
+
+
