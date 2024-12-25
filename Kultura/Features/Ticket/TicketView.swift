@@ -46,13 +46,11 @@ struct TicketView: View {
                                 .padding(.top, 16)
                             
                             Spacer()
-
                             
                         }
                         
                     }
 
-                    
                     Spacer()
                     
                     HStack{
@@ -119,91 +117,3 @@ extension View{
     TicketView()
 }
 
-
-
-/*
- VStack(spacing: 20) {
-     // Üst başlık
-     Text("Your Ticket")
-         .font(.headline)
-         .padding(.top, 20)
-     
-     // Bilet içeriği
-     ZStack {
-         // Arka plan görseli
-         Image("ticketView") // Arka plan görsel adını buraya yazın
-             .resizable()
-             .scaledToFit()
-         
-         // Biletin içeriği
-         VStack(spacing: 20) {
-             // Üst bilgiler
-             VStack(alignment: .leading, spacing: 10) {
-                 ticketRow(title: "Name", value: "Kamran Hasanli")
-                 ticketRow(title: "Görüşün adı", value: "Business lunch")
-                 ticketRow(title: "Guests", value: "2 guests")
-                 ticketRow(title: "Date", value: "15 January")
-                 ticketRow(title: "Time", value: "15:30")
-                 ticketRow(title: "Table", value: "#011")
-             }
-             .padding(.horizontal, 30)
-             .padding(.top, 50)
-             
-             Spacer()
-             
-             // Kesikli çizgi
-             DashedLine()
-                 .stroke(style: StrokeStyle(lineWidth: 1, dash: [5]))
-                 .frame(height: 1)
-                 .foregroundColor(.gray)
-                 .padding(.horizontal)
-             
-             // Alt bilgi (ID)
-             Text("ID - 251")
-                 .font(.headline)
-                 .padding()
-                 .frame(maxWidth: .infinity)
-                 .background(Color.white)
-                 .cornerRadius(10)
-                 .shadow(radius: 2)
-                 .padding(.horizontal, 50)
-             
-             Spacer()
-         }
-         .padding(.vertical, 30)
-     }
-     .background(Color(UIColor.systemGray6))
-     .cornerRadius(20)
-     .shadow(radius: 5)
-     .padding(.horizontal, 20)
-     
-     Spacer()
-     
-     // Alt buton
-     Button(action: {
-         // Kapatma işlemini buraya ekleyin
-     }) {
-         Text("Close")
-             .font(.subheadline)
-             .fontWeight(.bold)
-             .frame(maxWidth: 200) // Buton genişliği
-             .padding()
-             .background(Color(UIColor.systemGray4))
-             .cornerRadius(20)
-     }
-     .padding(.bottom, 30)
- }
- .background(Color(UIColor.systemGray5)) // Sayfanın genel arka plan rengi
- .edgesIgnoringSafeArea(.all) // Kenarları kapsaması için
-}
-
-// Tek satırlık bilgi satırları
-func ticketRow(title: String, value: String) -> some View {
- HStack {
-     Text(title)
-         .foregroundColor(.gray)
-     Spacer()
-     Text(value)
-         .bold()
- }
- */

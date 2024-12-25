@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct ListItem: Identifiable {
-    let id = UUID()
+    let id: UUID = UUID()
     let title: String
-    let destination: AnyView
+    let destination: AnyView?
+    let trailingView: AnyView? // Sağdaki özel görünüm
+    var isToggled: Bool? // Eğer bir Toggle varsa, durumu buradan takip edilecek
+
 }

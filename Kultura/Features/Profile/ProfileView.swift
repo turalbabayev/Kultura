@@ -21,7 +21,8 @@ struct ProfileView: View {
                             items: [
                                 ListItem(title: "Reservations", destination: AnyView(EditProfileView(firstName: "Tural", lastName: "Babayev", email: "turalbabayev@gmail.com", profileImage: "avatar", onDone: { _, _, _ in
                                     
-                                }))),
+                                })), trailingView: AnyView(Image(systemName: "chevron.right").foregroundColor(.gray))),
+                                
                                 ListItem(title: "Favorites", destination: AnyView(FavoritesView(restaurants: [
                                     Restaurant(
                                         name: "Agabala Restaurant",
@@ -43,7 +44,7 @@ struct ProfileView: View {
                                         leftIconColor: .red,
                                         hasBorder: false // Border var
                                     )
-                                ])))
+                                ])), trailingView: AnyView(Image(systemName: "chevron.right").foregroundColor(.gray)))
                             ]
                     )
                     
@@ -70,15 +71,21 @@ struct ProfileView: View {
                     
                     CustomListView(
                             items: [
-                                ListItem(title: "Payment methods", destination: AnyView(EditProfileView(firstName: "Tural", lastName: "Babayev", email: "turalbabayev@gmail.com", profileImage: "avatar", onDone: { _, _, _ in
-                                    
-                                }))),
-                                ListItem(title: "Account", destination: AnyView(EditProfileView(firstName: "Tural", lastName: "Babayev", email: "turalbabayev@gmail.com", profileImage: "avatar", onDone: { _, _, _ in
-                                    
-                                }))),
+                                ListItem(
+                                    title: "Payment methods",
+                                    destination: AnyView(Text("Payment Methods")),
+                                    trailingView: AnyView(Image(systemName: "chevron.right").foregroundColor(.gray)), // Simge
+                                    isToggled: nil // Toggle yok
+                                ),
+                                ListItem(
+                                    title: "Account",
+                                    destination: AnyView(AccountView()),
+                                    trailingView: AnyView(Image(systemName: "chevron.right").foregroundColor(.gray)), // Simge
+                                    isToggled: nil // Toggle yok
+                                ),
                                 ListItem(title: "Get Help", destination: AnyView(EditProfileView(firstName: "Tural", lastName: "Babayev", email: "turalbabayev@gmail.com", profileImage: "avatar", onDone: { _, _, _ in
                                     
-                                })))
+                                })), trailingView: AnyView(Image(systemName: "chevron.right").foregroundColor(.gray)))
                             ]
                     )
                     
