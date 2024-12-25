@@ -29,6 +29,9 @@
 		F685F2B02D066DDD00090EBF /* KulturaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685F2AF2D066DDD00090EBF /* KulturaTests.swift */; };
 		F685F2BA2D066DDD00090EBF /* KulturaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685F2B92D066DDD00090EBF /* KulturaUITests.swift */; };
 		F685F2BC2D066DDD00090EBF /* KulturaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685F2BB2D066DDD00090EBF /* KulturaUITestsLaunchTests.swift */; };
+		F6AEBEE12D1C94E3006945D0 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AEBEE02D1C94DE006945D0 /* CustomDatePicker.swift */; };
+		F6AEBEE32D1C95C0006945D0 /* Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AEBEE22D1C95BE006945D0 /* Availability.swift */; };
+		F6AEBEE62D1C9A22006945D0 /* ReservationDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AEBEE52D1C9A0E006945D0 /* ReservationDateView.swift */; };
 		F6BD9F9E2D170ECA008B920C /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9F9D2D170EC7008B920C /* OnboardingModel.swift */; };
 		F6BD9FA02D170ED4008B920C /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9F9F2D170ECD008B920C /* OnboardingViewModel.swift */; };
 		F6BD9FA22D170EDB008B920C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9FA12D170ED8008B920C /* OnboardingView.swift */; };
@@ -117,6 +120,9 @@
 		F685F2B52D066DDD00090EBF /* KulturaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KulturaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F685F2B92D066DDD00090EBF /* KulturaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturaUITests.swift; sourceTree = "<group>"; };
 		F685F2BB2D066DDD00090EBF /* KulturaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F6AEBEE02D1C94DE006945D0 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
+		F6AEBEE22D1C95BE006945D0 /* Availability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Availability.swift; sourceTree = "<group>"; };
+		F6AEBEE52D1C9A0E006945D0 /* ReservationDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationDateView.swift; sourceTree = "<group>"; };
 		F6BD9F9D2D170EC7008B920C /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		F6BD9F9F2D170ECD008B920C /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		F6BD9FA12D170ED8008B920C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -312,6 +318,7 @@
 		F685F2CA2D066EFF00090EBF /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F6AEBEE42D1C99EA006945D0 /* Reservation */,
 				F6D029482D1B508E003A53F6 /* Account */,
 				F6D029452D1B4BF9003A53F6 /* Ticket */,
 				F6D0293A2D1B146E003A53F6 /* RestaurantDetail */,
@@ -398,6 +405,7 @@
 		F685F2D32D066FE400090EBF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F6AEBEE22D1C95BE006945D0 /* Availability.swift */,
 				F6D029312D19F39A003A53F6 /* ListItem.swift */,
 			);
 			path = Models;
@@ -484,6 +492,14 @@
 			path = FeatureCoordinators;
 			sourceTree = "<group>";
 		};
+		F6AEBEE42D1C99EA006945D0 /* Reservation */ = {
+			isa = PBXGroup;
+			children = (
+				F6AEBEE52D1C9A0E006945D0 /* ReservationDateView.swift */,
+			);
+			path = Reservation;
+			sourceTree = "<group>";
+		};
 		F6BD9F9C2D170EAB008B920C /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -560,6 +576,7 @@
 		F6BD9FE12D173D67008B920C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F6AEBEE02D1C94DE006945D0 /* CustomDatePicker.swift */,
 				F6D029432D1B28FA003A53F6 /* ReviewsView.swift */,
 				F6D029412D1B255A003A53F6 /* ContactView.swift */,
 				F6D0293F2D1B2271003A53F6 /* TabContentView.swift */,
@@ -782,6 +799,7 @@
 				F685F29F2D066DDB00090EBF /* KulturaApp.swift in Sources */,
 				F6D029402D1B2273003A53F6 /* TabContentView.swift in Sources */,
 				F6BD9F9E2D170ECA008B920C /* OnboardingModel.swift in Sources */,
+				F6AEBEE32D1C95C0006945D0 /* Availability.swift in Sources */,
 				F63972E62D18834A00107557 /* ProfileView.swift in Sources */,
 				F6D029442D1B28FE003A53F6 /* ReviewsView.swift in Sources */,
 				F6BD9FE02D17354C008B920C /* SignupCoordinator.swift in Sources */,
@@ -790,6 +808,7 @@
 				F63972E82D188C7600107557 /* ProfileHeaderView.swift in Sources */,
 				F6BD9FD62D172D3E008B920C /* OnboardingCoordinator.swift in Sources */,
 				F63972D62D1849FB00107557 /* TabBarView.swift in Sources */,
+				F6AEBEE12D1C94E3006945D0 /* CustomDatePicker.swift in Sources */,
 				F6BD9FD92D172FE6008B920C /* LoginCoordinator.swift in Sources */,
 				F6D029472D1B4C05003A53F6 /* TicketView.swift in Sources */,
 				F64678862D179AB200EBCBCA /* SocialButton.swift in Sources */,
@@ -805,6 +824,7 @@
 				F63972E32D18743200107557 /* HomeRestaurantCardView.swift in Sources */,
 				F6BD9FD42D172C7D008B920C /* Coordinator.swift in Sources */,
 				F6BD9FE82D176450008B920C /* CustomTextField.swift in Sources */,
+				F6AEBEE62D1C9A22006945D0 /* ReservationDateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
