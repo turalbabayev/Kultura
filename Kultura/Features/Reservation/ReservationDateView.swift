@@ -9,43 +9,47 @@ import SwiftUI
 
 struct ReservationView: View {
     @State private var selectedDate: Date? = nil // Seçilen tarih
-    @State private var availabilityData: [Availability] = [
-        Availability(date: Calendar.current.date(byAdding: .day, value: 1, to: Date())!, isAvailable: true),
-        Availability(date: Calendar.current.date(byAdding: .day, value: 2, to: Date())!, isAvailable: false),
-        Availability(date: Calendar.current.date(byAdding: .day, value: 3, to: Date())!, isAvailable: true),
-    ]
+    @Environment(\.dismiss) var dismiss
+
     
     var body: some View {
         VStack {
-            CustomDatePicker(
-                selectedDate: $selectedDate,
-                availabilityData: availabilityData
-            )
-            .padding()
-            
-            // Rezervasyon yap butonu
-            if let selectedDate = selectedDate {
-                VStack {
-                    Text("Seçilen Tarih: \(formatDate(selectedDate))")
-                        .font(.headline)
-                        .padding(.top, 20)
+            NavigationView {
+                VStack{
+                    CustomDatePicker(selectedDate: $selectedDate)
+                        .padding()
                     
-                    Button(action: {
-                        // Rezervasyon işlemi
-                        print("Rezervasyon Yapıldı: \(selectedDate)")
-                    }) {
-                        Text("Rezervasyon Yap")
-                            .frame(maxWidth: .infinity)
+                    if let selectedDate = selectedDate {
+                        Text("Seçilen Tarih: \(formatDate(selectedDate))")
                             .padding()
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
+                    } else {
+                        Text("Henüz bir tarih seçilmedi.")
+                            .padding()
                     }
-                    .padding(.top, 10)
+                    
+                    Spacer()
                 }
-                .padding()
+                .background(Color("appSecondary"))
+                .padding(.top, 16)
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar{
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button(action: {
+                            dismiss()
+                        }) {
+                            Image("arrow-left")
+                                .frame(width: 24, height: 24)
+                        }
+                    }
+                    ToolbarItem(placement: .principal) {
+                        Text("Reserve a table")
+                            .font(AppFonts.customFont(name: "Poppins", size: 16))
+                    }
+                }
+                .background(Color("appSecondary"))
             }
         }
+        .background(Color("appSecondary"))
     }
     
     private func formatDate(_ date: Date) -> String {
@@ -54,6 +58,7 @@ struct ReservationView: View {
         return formatter.string(from: date)
     }
 }
+
 
 #Preview {
     ReservationView()
