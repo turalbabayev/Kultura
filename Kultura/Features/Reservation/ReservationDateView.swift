@@ -8,43 +8,63 @@
 import SwiftUI
 
 struct ReservationView: View {
+    @State private var guestCount: Int = 1 // Başlangıç değeri
     @State private var selectedDate: Date? = nil // Seçilen tarih
     @Environment(\.dismiss) var dismiss
+    
+    let minGuests = 1
+    let maxGuests = 10
 
     
     var body: some View {
         VStack {
             NavigationView {
-                VStack{
-                    CustomDatePicker(selectedDate: $selectedDate)
-                        .padding()
-                    
-                    if let selectedDate = selectedDate {
-                        Text("Seçilen Tarih: \(formatDate(selectedDate))")
-                            .padding()
-                    } else {
-                        Text("Henüz bir tarih seçilmedi.")
-                            .padding()
+                ScrollView{
+                    VStack(alignment: .leading ,spacing: 20){
+                        
+                        Text("Guests")
+                            .padding(.horizontal)
+                        
+                        StepperComponent(value: $guestCount, minValue: minGuests, maxValue: maxGuests)
+                            .padding(.horizontal)
+                        
+                        Text("Date")
+                            .padding(.horizontal)
+                            
+                        CustomDatePicker(selectedDate: $selectedDate)
+                            .padding(.horizontal)
+                        
+                        Text("Time")
+                            .padding(.horizontal)
+                        
+                        if let selectedDate = selectedDate {
+                            Text("Seçilen Tarih: \(formatDate(selectedDate)) ve Kisi Sayisi: \(guestCount)")
+                                .padding()
+                        } else {
+                            Text("Henüz bir tarih seçilmedi.")
+                                .padding()
+                        }
+                        
+                        Spacer()
                     }
-                    
-                    Spacer()
-                }
-                .background(Color("appSecondary"))
-                .padding(.top, 16)
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar{
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Button(action: {
-                            dismiss()
-                        }) {
-                            Image("arrow-left")
-                                .frame(width: 24, height: 24)
+                    .background(Color("appSecondary"))
+                    .padding(.top, 16)
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar{
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            Button(action: {
+                                dismiss()
+                            }) {
+                                Image("arrow-left")
+                                    .frame(width: 24, height: 24)
+                            }
+                        }
+                        ToolbarItem(placement: .principal) {
+                            Text("Reserve a table")
+                                .font(AppFonts.customFont(name: "Poppins", size: 16))
                         }
                     }
-                    ToolbarItem(placement: .principal) {
-                        Text("Reserve a table")
-                            .font(AppFonts.customFont(name: "Poppins", size: 16))
-                    }
+                    .background(Color("appSecondary"))
                 }
                 .background(Color("appSecondary"))
             }
