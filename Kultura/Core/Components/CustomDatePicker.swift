@@ -138,9 +138,9 @@ struct CustomDatePicker: View {
             return .purple
         }
         guard let availability = availability else {
-            return .gray.opacity(0.2)
+            return Color.gray.opacity(0.3)
         }
-        return availability.isAvailable ? Color("appSecondary") : .gray
+        return availability.isAvailable ? Color("appSecondary") : Color.gray.opacity(0.3)
     }
 }
 

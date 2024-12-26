@@ -34,6 +34,7 @@
 		F6AEBEE62D1C9A22006945D0 /* ReservationDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AEBEE52D1C9A0E006945D0 /* ReservationDateView.swift */; };
 		F6AEBEE82D1CA5DB006945D0 /* Stepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AEBEE72D1CA5D5006945D0 /* Stepper.swift */; };
 		F6AEBEEA2D1CACCD006945D0 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AEBEE92D1CACC4006945D0 /* TimePicker.swift */; };
+		F6AEBEEC2D1D787A006945D0 /* ReservationInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AEBEEB2D1D7870006945D0 /* ReservationInfoView.swift */; };
 		F6BD9F9E2D170ECA008B920C /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9F9D2D170EC7008B920C /* OnboardingModel.swift */; };
 		F6BD9FA02D170ED4008B920C /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9F9F2D170ECD008B920C /* OnboardingViewModel.swift */; };
 		F6BD9FA22D170EDB008B920C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9FA12D170ED8008B920C /* OnboardingView.swift */; };
@@ -127,6 +128,7 @@
 		F6AEBEE52D1C9A0E006945D0 /* ReservationDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationDateView.swift; sourceTree = "<group>"; };
 		F6AEBEE72D1CA5D5006945D0 /* Stepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stepper.swift; sourceTree = "<group>"; };
 		F6AEBEE92D1CACC4006945D0 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
+		F6AEBEEB2D1D7870006945D0 /* ReservationInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationInfoView.swift; sourceTree = "<group>"; };
 		F6BD9F9D2D170EC7008B920C /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		F6BD9F9F2D170ECD008B920C /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		F6BD9FA12D170ED8008B920C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -499,6 +501,7 @@
 		F6AEBEE42D1C99EA006945D0 /* Reservation */ = {
 			isa = PBXGroup;
 			children = (
+				F6AEBEEB2D1D7870006945D0 /* ReservationInfoView.swift */,
 				F6AEBEE52D1C9A0E006945D0 /* ReservationDateView.swift */,
 			);
 			path = Reservation;
@@ -823,6 +826,7 @@
 				F6BD9FA02D170ED4008B920C /* OnboardingViewModel.swift in Sources */,
 				F64678842D179A7800EBCBCA /* LoginConstants.swift in Sources */,
 				F64678822D17929C00EBCBCA /* GradientBackground.swift in Sources */,
+				F6AEBEEC2D1D787A006945D0 /* ReservationInfoView.swift in Sources */,
 				F6D029422D1B255D003A53F6 /* ContactView.swift in Sources */,
 				F6BD9FDB2D17300E008B920C /* LoginView.swift in Sources */,
 				F6BD9FDE2D17353E008B920C /* SignupView.swift in Sources */,

@@ -15,7 +15,7 @@ struct TimePickerComponent: View {
     var body: some View {
         VStack(spacing: 20) {
             // Saat Listesi
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 6), spacing: 10) {
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 5), spacing: 10) {
                 ForEach(timeSlots) { timeSlot in
                     Button(action: {
                         if selectedTime == timeSlot.time {
@@ -25,20 +25,22 @@ struct TimePickerComponent: View {
                         }
                     }) {
                         Text(timeSlot.time)
-                            .frame(width: 60, height: 40)
+                            .frame(width: 65, height: 40)
                             .background(
                                 selectedTime == timeSlot.time
                                     ? Color.blue // Seçili saat mavi
-                                    : (timeSlot.isAvailable ? Color.gray.opacity(0.2) : Color.red.opacity(0.3)) // Dolu saat kırmızı
+                                    : (timeSlot.isAvailable ? Color("appSecondary") : Color.gray.opacity(0.3)) // Dolu saat kırmızı
                             )
                             .foregroundColor(.black)
-                            .cornerRadius(10)
+                            .cornerRadius(24)
+                            .overlay(content: {
+                                RoundedRectangle(cornerRadius: 24)
+                                    .stroke(.gray, lineWidth: 0.5)
+                            })
                     }
                     .disabled(!timeSlot.isAvailable) // Eğer doluysa tıklanamaz
                 }
             }
-            .padding()
-
             // Add Yours Butonu
             HStack {
                 Spacer() // "Add Yours" butonunu sağa yaslamak için
@@ -48,15 +50,19 @@ struct TimePickerComponent: View {
                     Text("Add Yours")
                         .padding(.horizontal, 20)
                         .padding(.vertical, 10)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+                        .background(Color("appSecondary"))
+                        .foregroundColor(.black)
+                        .cornerRadius(24)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 24)
+                                .stroke(.gray, lineWidth: 0.5)
+                        }
                 }
                 .sheet(isPresented: $isAddingTime) {
                     AddTimeModal(timeSlots: $timeSlots) // Modal ekran
                 }
             }
-            .padding(.horizontal)
+            //.padding(.horizontal)
         }
         .onAppear {
             initializeTimeSlots() // İlk yüklemede tüm saatleri ayarla

@@ -19,59 +19,67 @@ struct ReservationView: View {
 
     
     var body: some View {
-        VStack {
+        ZStack {
             NavigationView {
-                ScrollView{
-                    VStack(alignment: .leading ,spacing: 20){
-                        
-                        Text("Guests")
-                            .padding(.horizontal)
-                        
-                        StepperComponent(value: $guestCount, minValue: minGuests, maxValue: maxGuests)
-                            .padding(.horizontal)
-                        
-                        Text("Date")
-                            .padding(.horizontal)
+                VStack{
+                    ScrollView{
+                        VStack(alignment: .leading ,spacing: 20){
                             
-                        CustomDatePicker(selectedDate: $selectedDate)
-                            .padding(.horizontal)
-                        
-                        Text("Time")
-                            .padding(.horizontal)
-                        
-                        TimePickerComponent(selectedTime: $selectedTime)
+                            Text("Guests")
+                                .padding(.horizontal)
+                            
+                            StepperComponent(value: $guestCount, minValue: minGuests, maxValue: maxGuests)
+                                .padding(.horizontal)
+                            
+                            Text("Date")
+                                .padding(.horizontal)
+                                
+                            CustomDatePicker(selectedDate: $selectedDate)
+                                .padding(.horizontal)
+                            
+                            Text("Time")
+                                .padding(.horizontal)
+                            
+                            TimePickerComponent(selectedTime: $selectedTime)
+                                .padding(.horizontal)
 
-                        
-                        if let selectedDate = selectedDate {
-                            Text("Seçilen Tarih: \(formatDate(selectedDate)) ve Kisi Sayisi: \(guestCount)")
-                                .padding()
-                        } else {
-                            Text("Henüz bir tarih seçilmedi.")
-                                .padding()
                         }
-                        
-                        Spacer()
-                    }
-                    .background(Color("appSecondary"))
-                    .padding(.top, 16)
-                    .navigationBarTitleDisplayMode(.inline)
-                    .toolbar{
-                        ToolbarItem(placement: .navigationBarLeading) {
-                            Button(action: {
-                                dismiss()
-                            }) {
-                                Image("arrow-left")
-                                    .frame(width: 24, height: 24)
+                        .background(Color("appSecondary"))
+                        .padding(.top, 16)
+                        .navigationBarTitleDisplayMode(.inline)
+                        .toolbar{
+                            ToolbarItem(placement: .navigationBarLeading) {
+                                Button(action: {
+                                    dismiss()
+                                }) {
+                                    Image("arrow-left")
+                                        .frame(width: 24, height: 24)
+                                }
+                            }
+                            ToolbarItem(placement: .principal) {
+                                Text("Reserve a table")
+                                    .font(AppFonts.customFont(name: "Poppins", size: 16))
                             }
                         }
-                        ToolbarItem(placement: .principal) {
-                            Text("Reserve a table")
-                                .font(AppFonts.customFont(name: "Poppins", size: 16))
-                        }
+                        .background(Color("appSecondary"))
                     }
                     .background(Color("appSecondary"))
+                                        
+                    HStack(alignment: .bottom){
+                        NavigationLink(destination: ReservationInfoView()) {
+                            Text("Close")
+                                .font(AppFonts.customFont(name: "Poppins-Regular", size: 16))
+                                .frame(maxWidth: 150) // Buton genişliği
+                                .padding()
+                                .background(Color(UIColor.systemGray4))
+                                .cornerRadius(20)
+                                .foregroundColor(.black)
+                                .padding()
+                        }
+                    }
+                    .frame(maxWidth: .infinity)
+                    .background(.white)
                 }
-                .background(Color("appSecondary"))
             }
         }
         .background(Color("appSecondary"))
@@ -88,3 +96,22 @@ struct ReservationView: View {
 #Preview {
     ReservationView()
 }
+
+/*
+ HStack{
+     NavigationLink(destination: TabBarView()) {
+         Text("Close")
+             .font(AppFonts.customFont(name: "Poppins-Regular", size: 16))
+             .frame(maxWidth: 150) // Buton genişliği
+             .padding()
+             .background(Color(UIColor.systemGray4))
+             .cornerRadius(20)
+             .foregroundColor(.black)
+             .padding()
+     }
+ }
+ .frame(maxWidth: .infinity)
+ .background(.white)
+ 
+ Spacer()
+ */
