@@ -67,7 +67,7 @@ struct ReservationView: View {
                                         
                     HStack(alignment: .bottom){
                         NavigationLink(destination: ReservationInfoView()) {
-                            Text("Close")
+                            Text("Continue")
                                 .font(AppFonts.customFont(name: "Poppins-Regular", size: 16))
                                 .frame(maxWidth: 150) // Buton genişliği
                                 .padding()
