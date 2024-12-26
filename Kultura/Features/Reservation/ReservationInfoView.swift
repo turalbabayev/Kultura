@@ -26,7 +26,7 @@ struct ReservationInfoView: View {
                             .font(.body)
                             .foregroundColor(.white)
                             .padding()
-                            .background(Color("appPrimary"))
+                            .background(Color.blue)
                             .cornerRadius(8)
                     }
 
