@@ -35,6 +35,8 @@
 		F6AEBEE82D1CA5DB006945D0 /* Stepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AEBEE72D1CA5D5006945D0 /* Stepper.swift */; };
 		F6AEBEEA2D1CACCD006945D0 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AEBEE92D1CACC4006945D0 /* TimePicker.swift */; };
 		F6AEBEEC2D1D787A006945D0 /* ReservationInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AEBEEB2D1D7870006945D0 /* ReservationInfoView.swift */; };
+		F6AEBEEE2D1E9311006945D0 /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AEBEED2D1E930F006945D0 /* Table.swift */; };
+		F6AEBEF02D1EAED2006945D0 /* RestaurantMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AEBEEF2D1EAED1006945D0 /* RestaurantMapView.swift */; };
 		F6BD9F9E2D170ECA008B920C /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9F9D2D170EC7008B920C /* OnboardingModel.swift */; };
 		F6BD9FA02D170ED4008B920C /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9F9F2D170ECD008B920C /* OnboardingViewModel.swift */; };
 		F6BD9FA22D170EDB008B920C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9FA12D170ED8008B920C /* OnboardingView.swift */; };
@@ -129,6 +131,8 @@
 		F6AEBEE72D1CA5D5006945D0 /* Stepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stepper.swift; sourceTree = "<group>"; };
 		F6AEBEE92D1CACC4006945D0 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
 		F6AEBEEB2D1D7870006945D0 /* ReservationInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationInfoView.swift; sourceTree = "<group>"; };
+		F6AEBEED2D1E930F006945D0 /* Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
+		F6AEBEEF2D1EAED1006945D0 /* RestaurantMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMapView.swift; sourceTree = "<group>"; };
 		F6BD9F9D2D170EC7008B920C /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		F6BD9F9F2D170ECD008B920C /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		F6BD9FA12D170ED8008B920C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -501,6 +505,7 @@
 		F6AEBEE42D1C99EA006945D0 /* Reservation */ = {
 			isa = PBXGroup;
 			children = (
+				F6AEBEEF2D1EAED1006945D0 /* RestaurantMapView.swift */,
 				F6AEBEEB2D1D7870006945D0 /* ReservationInfoView.swift */,
 				F6AEBEE52D1C9A0E006945D0 /* ReservationDateView.swift */,
 			);
@@ -583,6 +588,7 @@
 		F6BD9FE12D173D67008B920C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F6AEBEED2D1E930F006945D0 /* Table.swift */,
 				F6AEBEE92D1CACC4006945D0 /* TimePicker.swift */,
 				F6AEBEE72D1CA5D5006945D0 /* Stepper.swift */,
 				F6AEBEE02D1C94DE006945D0 /* CustomDatePicker.swift */,
@@ -797,6 +803,7 @@
 				F6D029362D1AF57A003A53F6 /* CustomRestaurantView.swift in Sources */,
 				F6BD9FD12D172C46008B920C /* AppCoordinator.swift in Sources */,
 				F6BD9FE62D176251008B920C /* AppFonts.swift in Sources */,
+				F6AEBEF02D1EAED2006945D0 /* RestaurantMapView.swift in Sources */,
 				F6AEBEE82D1CA5DB006945D0 /* Stepper.swift in Sources */,
 				F64678882D179FB800EBCBCA /* SignupViewModel.swift in Sources */,
 				F64678802D178E4F00EBCBCA /* KeyboardManager.swift in Sources */,
@@ -820,6 +827,7 @@
 				F6BD9FD62D172D3E008B920C /* OnboardingCoordinator.swift in Sources */,
 				F63972D62D1849FB00107557 /* TabBarView.swift in Sources */,
 				F6AEBEE12D1C94E3006945D0 /* CustomDatePicker.swift in Sources */,
+				F6AEBEEE2D1E9311006945D0 /* Table.swift in Sources */,
 				F6BD9FD92D172FE6008B920C /* LoginCoordinator.swift in Sources */,
 				F6D029472D1B4C05003A53F6 /* TicketView.swift in Sources */,
 				F64678862D179AB200EBCBCA /* SocialButton.swift in Sources */,
