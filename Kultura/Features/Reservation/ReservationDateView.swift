@@ -96,22 +96,3 @@ struct ReservationView: View {
 #Preview {
     ReservationView()
 }
-
-/*
- HStack{
-     NavigationLink(destination: TabBarView()) {
-         Text("Close")
-             .font(AppFonts.customFont(name: "Poppins-Regular", size: 16))
-             .frame(maxWidth: 150) // Buton genişliği
-             .padding()
-             .background(Color(UIColor.systemGray4))
-             .cornerRadius(20)
-             .foregroundColor(.black)
-             .padding()
-     }
- }
- .frame(maxWidth: .infinity)
- .background(.white)
- 
- Spacer()
- */
