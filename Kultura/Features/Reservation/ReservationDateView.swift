@@ -15,7 +15,7 @@ struct ReservationView: View {
     @Environment(\.dismiss) var dismiss
     
     let minGuests = 1
-    let maxGuests = 10
+    let maxGuests = 5
 
     
     var body: some View {
