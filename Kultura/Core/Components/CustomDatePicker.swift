@@ -54,7 +54,7 @@ struct CustomDatePicker: View {
                     
                     Button(action: {
                         if availability?.isAvailable == true {
-                            let strippedDate = stripTime(from: dayDate) // Sadece tarih bilgisi
+                            let strippedDate = stripTime(from: dayDate) // Sadece tarih bilgisini aliyoruz
                             if selectedDate == strippedDate {
                                 selectedDate = nil // Seçim kaldırılıyor
                             } else {
