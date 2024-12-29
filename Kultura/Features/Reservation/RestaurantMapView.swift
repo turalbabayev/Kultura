@@ -77,7 +77,7 @@ struct RestaurantMapView: View {
                         ZStack(alignment: .topLeading) {
                             // Harita arka planı
                             Color.gray.opacity(0.1)
-                                .frame(width: 600, height: 600) // Harita genişliği ve yüksekliği
+                                .frame(width: 600, height: 650) // Harita genişliği ve yüksekliği
                             
                             // Masaların yerleşimi
                             ForEach(floor.tables) { table in

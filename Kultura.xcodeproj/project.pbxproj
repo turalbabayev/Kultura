@@ -22,6 +22,7 @@
 		F64678842D179A7800EBCBCA /* LoginConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64678832D179A7700EBCBCA /* LoginConstants.swift */; };
 		F64678862D179AB200EBCBCA /* SocialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64678852D179AAD00EBCBCA /* SocialButton.swift */; };
 		F64678882D179FB800EBCBCA /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64678872D179FAF00EBCBCA /* SignupViewModel.swift */; };
+		F66DC39B2D21B8680062B1E8 /* InfoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66DC39A2D21B8660062B1E8 /* InfoRowView.swift */; };
 		F685F29F2D066DDB00090EBF /* KulturaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685F29E2D066DDB00090EBF /* KulturaApp.swift */; };
 		F685F2A12D066DDB00090EBF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685F2A02D066DDB00090EBF /* ContentView.swift */; };
 		F685F2A32D066DDD00090EBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F685F2A22D066DDD00090EBF /* Assets.xcassets */; };
@@ -118,6 +119,7 @@
 		F64678832D179A7700EBCBCA /* LoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstants.swift; sourceTree = "<group>"; };
 		F64678852D179AAD00EBCBCA /* SocialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialButton.swift; sourceTree = "<group>"; };
 		F64678872D179FAF00EBCBCA /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		F66DC39A2D21B8660062B1E8 /* InfoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRowView.swift; sourceTree = "<group>"; };
 		F685F29B2D066DDB00090EBF /* Kultura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kultura.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F685F29E2D066DDB00090EBF /* KulturaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturaApp.swift; sourceTree = "<group>"; };
 		F685F2A02D066DDB00090EBF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -597,6 +599,7 @@
 		F6BD9FE12D173D67008B920C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F66DC39A2D21B8660062B1E8 /* InfoRowView.swift */,
 				F6AEBEED2D1E930F006945D0 /* Table.swift */,
 				F6AEBEE92D1CACC4006945D0 /* TimePicker.swift */,
 				F6AEBEE72D1CA5D5006945D0 /* Stepper.swift */,
@@ -827,6 +830,7 @@
 				F685F29F2D066DDB00090EBF /* KulturaApp.swift in Sources */,
 				F6D029402D1B2273003A53F6 /* TabContentView.swift in Sources */,
 				F6BD9F9E2D170ECA008B920C /* OnboardingModel.swift in Sources */,
+				F66DC39B2D21B8680062B1E8 /* InfoRowView.swift in Sources */,
 				F6AEBEE32D1C95C0006945D0 /* Availability.swift in Sources */,
 				F6AEBEF22D1EB0F4006945D0 /* Floor.swift in Sources */,
 				F63972E62D18834A00107557 /* ProfileView.swift in Sources */,

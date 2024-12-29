@@ -13,28 +13,34 @@ struct ContactView: View {
         VStack(spacing: 16) {
                 // Call Center
                 Text("Call Center")
-                    .font(.headline)
+                    .font(AppFonts.customFont(name: "Poppins", size: 18))
                     .frame(maxWidth: .infinity, alignment: .leading)
 
                 HStack {
                     Text("Coffemania")
+                        .font(AppFonts.customFont(name: "Poppins", size: 14))
+                    
                     Spacer()
                     Button(action: {}) {
-                        Image(systemName: "globe")
-                            .font(.title2)
+                        Image("global")
+                            .padding(10)
+                            .background(.white)
+                            .cornerRadius(32)
                     }
                     Button(action: {}) {
-                        Image(systemName: "phone.fill")
-                            .font(.title2)
+                        Image("call")
+                            .padding(10)
+                            .background(.white)
+                            .cornerRadius(32)
                     }
                 }
                 .padding()
-                .background(Color(UIColor.systemGray6))
+                .background(Color.gray.opacity(0.4))
                 .cornerRadius(12)
 
                 // Location
                 Text("Location")
-                    .font(.headline)
+                    .font(AppFonts.customFont(name: "Poppins", size: 14))
                     .frame(maxWidth: .infinity, alignment: .leading)
 
                 // Map Image Placeholder
@@ -100,3 +106,9 @@ struct ContactView: View {
             .padding()
     }
 }
+
+
+#Preview {
+    ContactView()
+}
+

@@ -85,35 +85,32 @@ struct RestaurantDetailView: View {
                     .padding(.top, 160)
                 }
                 
-                
                 VStack(alignment: .leading, spacing: 8){
                     HStack{
                         Text("Popular")
-                            .font(.subheadline)
-                            .padding(8)
+                            .font(AppFonts.customFont(name: "Poppins", size: 10))
+                            .padding(.horizontal, 12)
+                            .padding(4.5)
                             .background(Color.gray.opacity(0.2))
                             .cornerRadius(24)
 
                         Spacer()
                         
-                        Text("⭐️ 5.0 (45 Reviews)")
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
+                        InfoRowView(imageName: "star", title: "5.0", value: "(45 Reviews)", valueColor: .gray)
+                        
                     }
                     
                     HStack{
                         Text("Coffemania Narimanov")
-                            .font(.title2)
-                            .fontWeight(.bold)
+                            .font(AppFonts.customFont(name: "Poppins", size: 20))
                     }
                     
-                    VStack {
-                        Text("⏰ Open until: 22:00")
-                        Text("💰 Average Price: 30-40 AZN")
-                        Text("🍴 Cuisine: Turkish")
+                    VStack(alignment: .leading, spacing: 8) {
+                        InfoRowView(imageName: "clock", title: "Open until:", value: "22:00", valueColor: .gray)
+                        InfoRowView(imageName: "dollar-circle", title: "Average Price:", value: "30-40 AZN", valueColor: .gray)
+                        InfoRowView(imageName: "dollar-circle", title: "Cuisine", value: "Turkish", valueColor: .gray)
                     }
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
+                    
                     
                 }
                 .padding()
@@ -152,22 +149,20 @@ struct RestaurantDetailView: View {
                 TabContentView(selectedTab: selectedTab)
                 
                 // Alt buton
-                ZStack{
-                    Button(action: {
-                        print("Reserve a table tapped")
-                    }) {
-                        Text("Reserve a table")
-                            .frame(maxWidth: .infinity)
+                HStack(alignment: .bottom){
+                    NavigationLink(destination: TicketView()) {
+                        Text("Continue")
+                            .font(AppFonts.customFont(name: "Poppins-Regular", size: 16))
+                            .frame(maxWidth: 150) // Buton genişliği
                             .padding()
-                            .background(Color.gray.opacity(0.2))
-                            .cornerRadius(16)
+                            .background(Color(UIColor.systemGray4))
+                            .cornerRadius(24)
                             .foregroundColor(.black)
-                            .padding(.horizontal)
+                            .padding()
                     }
-                    .padding(.vertical, 16)
                 }
+                .frame(maxWidth: .infinity)
                 .background(.white)
-                .padding(.top, 16)
                 
             }
             .background(Color("appSecondary"))
