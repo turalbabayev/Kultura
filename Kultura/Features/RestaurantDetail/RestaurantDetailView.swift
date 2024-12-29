@@ -33,14 +33,12 @@ struct RestaurantDetailView: View {
                     .frame(height: 270)
                     .ignoresSafeArea(edges: .top) // Safe area dışına taşıyoruz
 
-                    
-                    
                     HStack{
                         Button {
                             dismiss()
                         } label: {
                             Image(systemName: "chevron.left")
-                                .font(.title2)
+                                .frame(width: 24, height: 24)
                                 .foregroundColor(.black)
                                 .padding(8)
                                 .background(Color.white)
@@ -56,8 +54,8 @@ struct RestaurantDetailView: View {
                             isFavorited.toggle()
                         }) {
                             Image(systemName: isFavorited ? "heart.fill" : "heart")
-                                .font(.title2)
-                                .foregroundColor(isFavorited ? .red : .black)
+                                .frame(width: 24, height: 24)
+                                .foregroundColor(isFavorited ? .purple : .black)
                                 .padding(8)
                                 .background(Color.white)
                                 .clipShape(Circle())
