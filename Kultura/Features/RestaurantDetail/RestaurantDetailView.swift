@@ -24,7 +24,7 @@ struct RestaurantDetailView: View {
                             Image(restaurantImages[index])
                                 .resizable()
                                 .scaledToFill()
-                                .frame(width: UIScreen.main.bounds.width, height: 350)
+                                .frame(width: UIScreen.main.bounds.width, height: 340)
                                 .clipped()
                                 .tag(index)
                         }
@@ -111,7 +111,7 @@ struct RestaurantDetailView: View {
                 }
                 .padding()
                 .background(Color("appSecondary"))
-                .cornerRadius(16)
+                .cornerRadius(32)
                 .padding(.top, -100)
                 
                 // Tab Seçimi
