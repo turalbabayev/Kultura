@@ -142,7 +142,8 @@ struct RestaurantDetailView: View {
                 .padding(.horizontal)
                 
                 Divider()
-                    .padding(.vertical, 16)
+                    .padding(.top, 16)
+                    .padding(.horizontal)
                 
                 Spacer()
 

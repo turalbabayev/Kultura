@@ -18,7 +18,7 @@ struct TabContentView: View {
             case .reviews:
                 ReviewsView()
             case .contact:
-                ScrollView {
+                ScrollView(showsIndicators: false) {
                     ContactView()
                 }
             }
