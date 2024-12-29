@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import Resolver
 
 struct SignupView: View {
-    @StateObject var viewModel = SignupViewModel()
+    @InjectedObject private var viewModel: SignupViewModel // Dependency Injection
     @ObservedObject private var keyboardManager = KeyboardManager()
     
     var body: some View {
@@ -38,7 +39,7 @@ struct SignupView: View {
                     CustomButton(
                         title: "Sign up",
                         action: {
-                            print("Name: \(viewModel.name), Email: \(viewModel.email)")
+                            viewModel.signup()
                         },
                         backgroundColor: .white,
                         foregroundColor: .black,

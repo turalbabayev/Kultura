@@ -28,6 +28,8 @@
 		F66DC3A12D21E5F40062B1E8 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66DC3A02D21E5F30062B1E8 /* APIManager.swift */; };
 		F66DC3A32D21E6020062B1E8 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66DC3A22D21E6010062B1E8 /* AuthService.swift */; };
 		F66DC3A52D21E60F0062B1E8 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66DC3A42D21E60E0062B1E8 /* AuthManager.swift */; };
+		F66DC3A72D21EE7E0062B1E8 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66DC3A62D21EE790062B1E8 /* AuthRepository.swift */; };
+		F66DC3AA2D21F2160062B1E8 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = F66DC3A92D21F2160062B1E8 /* Resolver */; };
 		F685F29F2D066DDB00090EBF /* KulturaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685F29E2D066DDB00090EBF /* KulturaApp.swift */; };
 		F685F2A12D066DDB00090EBF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685F2A02D066DDB00090EBF /* ContentView.swift */; };
 		F685F2A32D066DDD00090EBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F685F2A22D066DDD00090EBF /* Assets.xcassets */; };
@@ -130,6 +132,7 @@
 		F66DC3A02D21E5F30062B1E8 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		F66DC3A22D21E6010062B1E8 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F66DC3A42D21E60E0062B1E8 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		F66DC3A62D21EE790062B1E8 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		F685F29B2D066DDB00090EBF /* Kultura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kultura.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F685F29E2D066DDB00090EBF /* KulturaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturaApp.swift; sourceTree = "<group>"; };
 		F685F2A02D066DDB00090EBF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -202,6 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F66DC3AA2D21F2160062B1E8 /* Resolver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +500,7 @@
 		F685F2DA2D06705000090EBF /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				F66DC3A62D21EE790062B1E8 /* AuthRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -762,6 +767,9 @@
 				Base,
 			);
 			mainGroup = F685F2922D066DDB00090EBF;
+			packageReferences = (
+				F66DC3A82D21F2160062B1E8 /* XCRemoteSwiftPackageReference "Resolver" */,
+			);
 			productRefGroup = F685F29C2D066DDB00090EBF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -858,6 +866,7 @@
 				F63972E82D188C7600107557 /* ProfileHeaderView.swift in Sources */,
 				F6BD9FD62D172D3E008B920C /* OnboardingCoordinator.swift in Sources */,
 				F66DC39D2D21E42E0062B1E8 /* User.swift in Sources */,
+				F66DC3A72D21EE7E0062B1E8 /* AuthRepository.swift in Sources */,
 				F63972D62D1849FB00107557 /* TabBarView.swift in Sources */,
 				F66DC39F2D21E5E70062B1E8 /* APIEndpoint.swift in Sources */,
 				F6AEBEE12D1C94E3006945D0 /* CustomDatePicker.swift in Sources */,
@@ -1212,6 +1221,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F66DC3A82D21F2160062B1E8 /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F66DC3A92D21F2160062B1E8 /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F66DC3A82D21F2160062B1E8 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F685F2932D066DDB00090EBF /* Project object */;
 }

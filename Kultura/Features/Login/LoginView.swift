@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import Resolver
 
 struct LoginView: View {
-    @StateObject private var viewModel = LoginViewModel()
+    @InjectedObject private var viewModel: LoginViewModel // Dependency Injection
     @ObservedObject private var keyboardManager = KeyboardManager()
     @State private var navigateToTabBar = false // Geçiş kontrolü
 
@@ -63,7 +64,8 @@ struct LoginView: View {
                             CustomButton(
                                 title: "Log in",
                                 action: {
-                                    navigateToTabBar = true // Geçiş tetikleniyor
+                                    viewModel.login()
+                                    //navigateToTabBar = true // Geçiş tetikleniyor
                                 },
                                 backgroundColor: .white,
                                 foregroundColor: .black,
