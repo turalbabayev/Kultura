@@ -8,36 +8,31 @@
 import SwiftUI
 
 struct RestaurantDetailView: View {
-    @Environment(\.dismiss) var dismiss // Geri dönüş
-    
-    //Variables
+    @Environment(\.dismiss) var dismiss
     @State private var selectedTab: RestaurantTab = .menu
     @State private var selectedImageIndex = 0
     @State private var isFavorited = false
-    
-    
-    private let restaurantImages = [
-            "r1", // Resim adlarını buraya ekleyin
-            "r1",
-            "r1"
-        ]
+
+    private let restaurantImages = ["r2", "r2", "r2"]
     
     var body : some View {
         NavigationView {
             VStack(spacing: 0){
                 ZStack(alignment: .top){
                     TabView(selection: $selectedImageIndex){
-                        ForEach(restaurantImages.indices, id: \.self){index in
+                        ForEach(restaurantImages.indices, id: \.self) { index in
                             Image(restaurantImages[index])
                                 .resizable()
                                 .scaledToFill()
-                                .frame(height: 200)
+                                .frame(width: UIScreen.main.bounds.width, height: 350)
                                 .clipped()
                                 .tag(index)
                         }
                     }
                     .tabViewStyle(PageTabViewStyle())
-                    .frame(height: 200)
+                    .frame(height: 270)
+                    .ignoresSafeArea(edges: .top) // Safe area dışına taşıyoruz
+
                     
                     
                     HStack{
@@ -70,7 +65,7 @@ struct RestaurantDetailView: View {
                         }
                         .padding(.trailing, 16)
                     }
-                    .padding(.top, 16)
+                    .padding(.top, 8)
                     
                     HStack(alignment: .bottom){
                         Spacer()
@@ -82,8 +77,9 @@ struct RestaurantDetailView: View {
                             .cornerRadius(8)
                             .padding(.trailing, 16)
                     }
-                    .padding(.top, 160)
+                    .padding(.top, 130)
                 }
+                
                 
                 VStack(alignment: .leading, spacing: 8){
                     HStack{
@@ -116,7 +112,7 @@ struct RestaurantDetailView: View {
                 .padding()
                 .background(Color("appSecondary"))
                 .cornerRadius(16)
-                .padding(.top, -16)
+                .padding(.top, -100)
                 
                 // Tab Seçimi
                 HStack(spacing: 16) {
