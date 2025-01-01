@@ -16,6 +16,7 @@ final class AuthService {
     }
     
     func login(email: String, password: String) -> AnyPublisher<User, Error> {
+        print("auth service login")
         return repository.login(email: email, password: password)
     }
     

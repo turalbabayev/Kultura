@@ -22,6 +22,7 @@ final class AuthRepository: AuthRepositoryProtocol{
     }
     
     func login(email: String, password: String) -> AnyPublisher<User, any Error> {
+        print("repository login")
         let endpoint = APIEndpoint.login(email: email, password: password)
         return apiManager.performRequest(endpoint: endpoint)
     }
