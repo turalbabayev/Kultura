@@ -11,7 +11,6 @@ import Resolver
 struct LoginView: View {
     @InjectedObject private var viewModel: LoginViewModel // Dependency Injection
     @ObservedObject private var keyboardManager = KeyboardManager()
-    @State private var navigateToTabBar = false // Geçiş kontrolü
 
     var body: some View {
         NavigationStack {
@@ -59,12 +58,20 @@ struct LoginView: View {
                                 })
                             }
                             .padding(.bottom, geometry.size.height * 0.05)
+                            
+                            // Hata Mesajı
+                            if let errorMessage = viewModel.errorMessage {
+                                Text(errorMessage)
+                                    .foregroundColor(.red)
+                                    .font(.system(size: 14))
+                            }
 
                             // Log in Butonu ve Navigation
                             CustomButton(
-                                title: "Log in",
+                                title: viewModel.isLoading ? "Loading..." : "Log in",
                                 action: {
                                     viewModel.login()
+                                    
                                     //navigateToTabBar = true // Geçiş tetikleniyor
                                 },
                                 backgroundColor: .white,
@@ -85,7 +92,7 @@ struct LoginView: View {
                         .padding(.bottom, keyboardManager.keyboardHeight)
                         .animation(.easeOut(duration: 0.2), value: keyboardManager.keyboardHeight)
                     }
-                    .navigationDestination(isPresented: $navigateToTabBar) {
+                    .navigationDestination(isPresented: $viewModel.isLoginSuccessful) {
                         TabBarView() // Geçiş yapılacak görünüm
                     }
                 }
