@@ -11,6 +11,7 @@ import Resolver
 struct LoginView: View {
     @InjectedObject private var viewModel: LoginViewModel // Dependency Injection
     @ObservedObject private var keyboardManager = KeyboardManager()
+    private var apiManager = APIManager()
 
     var body: some View {
         NavigationStack {
@@ -71,7 +72,7 @@ struct LoginView: View {
                                 title: viewModel.isLoading ? "Loading..." : "Log in",
                                 action: {
                                     viewModel.login()
-                                    
+                                    apiManager.makeAPIRequest()
                                     //navigateToTabBar = true // Geçiş tetikleniyor
                                 },
                                 backgroundColor: .white,

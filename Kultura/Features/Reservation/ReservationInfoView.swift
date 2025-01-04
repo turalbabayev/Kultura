@@ -43,10 +43,10 @@ struct ReservationInfoView: View {
                                 .padding(20)
                                 .background(Color(UIColor.systemGray5))
                                 .cornerRadius(24)
-                                .onChange(of: phoneNumber) { oldValue, newValue in
+                                //.onChange(of: phoneNumber) { oldValue, newValue in
                                     // Kullanıcı sadece rakam girebilsin
-                                    phoneNumber = newValue.filter { $0.isNumber }
-                                }
+                                    //phoneNumber = newValue.filter { $0.isNumber }
+                                //}
                         }
                         .background(Color(UIColor.systemGray5))
                         .cornerRadius(16)
@@ -107,20 +107,24 @@ struct ReservationInfoView: View {
                 .frame(maxWidth: .infinity)
                 .background(Color("appSecondary")) // İçerik için arka plan rengi
                 .navigationBarTitleDisplayMode(.inline)
+                /*
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button(action: {
-                            dismiss()
+                            //dismiss
                         }) {
                             Image("arrow-left")
                                 .frame(width: 24, height: 24)
                         }
                     }
+                    
                     ToolbarItem(placement: .principal) {
                         Text("Reserve a table")
                             .font(AppFonts.customFont(name: "Poppins", size: 16))
                     }
+                    
                 }
+                 */
                 
                 
             }
