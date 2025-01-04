@@ -30,7 +30,6 @@
 		F66DC3A52D21E60F0062B1E8 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66DC3A42D21E60E0062B1E8 /* AuthManager.swift */; };
 		F66DC3A72D21EE7E0062B1E8 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66DC3A62D21EE790062B1E8 /* AuthRepository.swift */; };
 		F66DC3AA2D21F2160062B1E8 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = F66DC3A92D21F2160062B1E8 /* Resolver */; };
-		F66DC3B02D25F6590062B1E8 /* taboo_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F66DC3AF2D25F6590062B1E8 /* taboo_sound.mp3 */; };
 		F685F29F2D066DDB00090EBF /* KulturaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685F29E2D066DDB00090EBF /* KulturaApp.swift */; };
 		F685F2A12D066DDB00090EBF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685F2A02D066DDB00090EBF /* ContentView.swift */; };
 		F685F2A32D066DDD00090EBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F685F2A22D066DDD00090EBF /* Assets.xcassets */; };
@@ -134,7 +133,6 @@
 		F66DC3A22D21E6010062B1E8 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F66DC3A42D21E60E0062B1E8 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		F66DC3A62D21EE790062B1E8 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
-		F66DC3AF2D25F6590062B1E8 /* taboo_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = taboo_sound.mp3; sourceTree = "<group>"; };
 		F685F29B2D066DDB00090EBF /* Kultura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kultura.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F685F29E2D066DDB00090EBF /* KulturaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KulturaApp.swift; sourceTree = "<group>"; };
 		F685F2A02D066DDB00090EBF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -388,7 +386,6 @@
 		F685F2CD2D066F1B00090EBF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F66DC3AF2D25F6590062B1E8 /* taboo_sound.mp3 */,
 				F6BD9FA62D171009008B920C /* Fonts */,
 				F685F2D02D066F7400090EBF /* Assets */,
 				F685F2D12D066F7B00090EBF /* Localization */,
@@ -799,7 +796,6 @@
 				F6BD9FC02D1710D1008B920C /* Poppins-BoldItalic.ttf in Resources */,
 				F6BD9FC12D1710D1008B920C /* Poppins-Bold.ttf in Resources */,
 				F6BD9FC22D1710D1008B920C /* Poppins-Italic.ttf in Resources */,
-				F66DC3B02D25F6590062B1E8 /* taboo_sound.mp3 in Resources */,
 				F6BD9FC32D1710D1008B920C /* Poppins-ExtraBold.ttf in Resources */,
 				F6BD9FC42D1710D1008B920C /* Poppins-Regular.ttf in Resources */,
 				F6BD9FC52D1710D1008B920C /* Poppins-Light.ttf in Resources */,
