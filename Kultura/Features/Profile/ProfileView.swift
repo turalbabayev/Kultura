@@ -35,7 +35,7 @@ struct ProfileView: View {
                                         hasBorder: false // Border yok
                                     ),
                                     Restaurant(
-                                        name: "Coffelea Khataii",
+                                        name: "Coffelea Khatai",
                                         rating: 4.3,
                                         priceRange: "30-40 AZN",
                                         image: Image("r1"),
