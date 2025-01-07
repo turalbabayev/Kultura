@@ -19,6 +19,11 @@ struct ContentView: View {
                 // Ekranı güncellemek için dinamik olarak izleme
             }
          */
+        
+        /*
+         daha
+         sonra eklenecek kodlar buraya yazilacak
+         */
     }
 }
 
