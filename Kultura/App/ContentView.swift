@@ -20,10 +20,7 @@ struct ContentView: View {
             }
          */
         
-        /*
-         daha
-         sonra eklenecek kodlar buraya yazilacak
-         */
+        
     }
 }
 
