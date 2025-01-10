@@ -7,6 +7,7 @@
 
 import XCTest
 @testable import Kultura
+import Combine
 
 final class KulturaTests: XCTestCase {
 
@@ -34,3 +35,5 @@ final class KulturaTests: XCTestCase {
     }
 
 }
+
+

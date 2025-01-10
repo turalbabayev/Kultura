@@ -9,6 +9,7 @@ import Foundation
 import Combine
 
 final class APIManager {
+    
     func performRequest<T: Decodable>(endpoint: APIEndpoint) -> AnyPublisher<T, Error> {
         //Convert API to URL
         guard let url = URL(string: endpoint.url) else {
