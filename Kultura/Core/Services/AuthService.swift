@@ -20,7 +20,7 @@ final class AuthService {
         return repository.login(email: email, password: password)
     }
     
-    func signup(name: String, surname: String, email: String, password: String) -> AnyPublisher<User, Error> {
-        return repository.signup(name: name, surname: surname, email: email, password: password)
+    func signup(email: String, fullName: String, age: Int, password: String) -> AnyPublisher<User, Error> {
+        return repository.signup(email: email, fullName: fullName, age: age, password: password)
     }
 }

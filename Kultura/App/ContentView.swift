@@ -12,7 +12,9 @@ struct ContentView: View {
     @StateObject private var appCoordinator = AppCoordinator()
     
     var body: some View {
-        RestaurantMapView()
+        
+        //RestaurantMapView()
+        SignupView()
         /*
         appCoordinator.start()
             .onReceive(appCoordinator.$currentView) { newView in

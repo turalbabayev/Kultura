@@ -80,6 +80,8 @@
 		F6BD9FE32D173D7D008B920C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9FE22D173D7C008B920C /* CustomButton.swift */; };
 		F6BD9FE62D176251008B920C /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9FE52D176244008B920C /* AppFonts.swift */; };
 		F6BD9FE82D176450008B920C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BD9FE72D17644C008B920C /* CustomTextField.swift */; };
+		F6CD6B6D2D3C48A400E0FEFA /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD6B6C2D3C489E00E0FEFA /* APIResponse.swift */; };
+		F6CD6B6F2D3C48C900E0FEFA /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CD6B6E2D3C48C200E0FEFA /* APIError.swift */; };
 		F6D029322D19F39D003A53F6 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D029312D19F39A003A53F6 /* ListItem.swift */; };
 		F6D029342D19F426003A53F6 /* CustomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D029332D19F423003A53F6 /* CustomListView.swift */; };
 		F6D029362D1AF57A003A53F6 /* CustomRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D029352D1AF576003A53F6 /* CustomRestaurantView.swift */; };
@@ -187,6 +189,8 @@
 		F6BD9FE22D173D7C008B920C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		F6BD9FE52D176244008B920C /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 		F6BD9FE72D17644C008B920C /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		F6CD6B6C2D3C489E00E0FEFA /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		F6CD6B6E2D3C48C200E0FEFA /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		F6D029312D19F39A003A53F6 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		F6D029332D19F423003A53F6 /* CustomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListView.swift; sourceTree = "<group>"; };
 		F6D029352D1AF576003A53F6 /* CustomRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRestaurantView.swift; sourceTree = "<group>"; };
@@ -437,6 +441,8 @@
 		F685F2D32D066FE400090EBF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F6CD6B6E2D3C48C200E0FEFA /* APIError.swift */,
+				F6CD6B6C2D3C489E00E0FEFA /* APIResponse.swift */,
 				F6AEBEF32D1EB107006945D0 /* TableModel.swift */,
 				F6AEBEF12D1EB0ED006945D0 /* Floor.swift */,
 				F6AEBEE22D1C95BE006945D0 /* Availability.swift */,
@@ -850,6 +856,7 @@
 				F685F2A12D066DDB00090EBF /* ContentView.swift in Sources */,
 				F63972E12D18733F00107557 /* SectionView.swift in Sources */,
 				F6D0294A2D1B5096003A53F6 /* AccountView.swift in Sources */,
+				F6CD6B6F2D3C48C900E0FEFA /* APIError.swift in Sources */,
 				F646787E2D178C3F00EBCBCA /* LoginViewModel.swift in Sources */,
 				F685F29F2D066DDB00090EBF /* KulturaApp.swift in Sources */,
 				F6D029402D1B2273003A53F6 /* TabContentView.swift in Sources */,
@@ -884,6 +891,7 @@
 				F6BD9FDE2D17353E008B920C /* SignupView.swift in Sources */,
 				F66DC3A12D21E5F40062B1E8 /* APIManager.swift in Sources */,
 				F6D029322D19F39D003A53F6 /* ListItem.swift in Sources */,
+				F6CD6B6D2D3C48A400E0FEFA /* APIResponse.swift in Sources */,
 				F63972DB2D184DDF00107557 /* HomeView.swift in Sources */,
 				F6D029392D1B0A7B003A53F6 /* FavoritesView.swift in Sources */,
 				F63972E32D18743200107557 /* HomeRestaurantCardView.swift in Sources */,

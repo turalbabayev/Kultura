@@ -8,17 +8,17 @@
 import Foundation
 
 struct User: Codable {
-    let id: Int?
-    let name: String
-    let surname: String
+    let id: String?
     let email: String
+    let fullName: String
+    let age: Int
     let token: String?
     
-    init(id: Int?, name: String, surname: String, email: String, token: String?) {
-        self.id = id
-        self.name = name
-        self.surname = surname
-        self.email = email
-        self.token = token
+    enum CodingKeys: String, CodingKey {
+        case id
+        case email
+        case fullName
+        case age
+        case token
     }
 }

@@ -5,13 +5,14 @@
 //  Created by Tural Babayev on 22.12.2024.
 //
 
+import Foundation
 import SwiftUI
 import Combine
 
 class SignupViewModel: ObservableObject{
-    @Published var name: String = ""
-    @Published var surname: String = ""
     @Published var email: String = ""
+    @Published var fullName: String = ""
+    @Published var age: String = ""
     @Published var password: String = ""
     @Published var passwordAgain: String = ""
     
@@ -29,39 +30,64 @@ class SignupViewModel: ObservableObject{
     }
     
     func signup() {
-        guard !name.isEmpty, !surname.isEmpty, !email.isEmpty, !password.isEmpty, password == passwordAgain else {
-            errorMessage = "All fields are required."
+        // Validasyon kontrolleri
+        guard !fullName.isEmpty, !email.isEmpty, !age.isEmpty, !password.isEmpty else {
+            errorMessage = "Tüm alanları doldurunuz."
             return
         }
         
         guard password == passwordAgain else {
-            errorMessage = "Passwords do not match."
+            errorMessage = "Şifreler eşleşmiyor."
             return
         }
         
-        // Loading Başlat
+        guard let ageInt = Int(age) else {
+            errorMessage = "Geçerli bir yaş giriniz."
+            return
+        }
+        
+        // Email formatı kontrolü
+        guard isValidEmail(email) else {
+            errorMessage = "Geçerli bir email adresi giriniz."
+            return
+        }
+        
         isLoading = true
         errorMessage = nil
         
-        // AuthService ile API çağrısı
-        authService.signup(name: name, surname: surname, email: email, password: password)
-            .receive(on: DispatchQueue.main) // Ana thread üzerinde işlem yapıyoruz
+        authService.signup(email: email, fullName: fullName, age: ageInt, password: password)
+            .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 guard let self = self else { return }
-                self.isLoading = false // Loading Durumu Durdur
+                self.isLoading = false
+                
                 switch completion {
                 case .failure(let error):
-                    self.errorMessage = error.localizedDescription // Hata Mesajı Gönder
+                    if let apiError = error as? APIError {
+                        switch apiError {
+                        case .serverError(let message):
+                            self.errorMessage = message
+                        default:
+                            self.errorMessage = "Bir hata oluştu. Lütfen tekrar deneyin."
+                        }
+                    } else {
+                        self.errorMessage = error.localizedDescription
+                    }
                 case .finished:
                     break
                 }
-            } receiveValue: { [weak self] user in
+            } receiveValue: { [weak self] _ in
                 guard let self = self else { return }
-                if let token = user.token {
-                    AuthManager.shared.saveToken(token) // Token'ı Kaydet
-                }
-                self.isSignupSuccessful = true // Başarılı Durumu
+                print("Signup successful, navigating to login...")
+                self.isSignupSuccessful = true
+                print("isSignupSuccessful set to: \(self.isSignupSuccessful)")
             }
             .store(in: &cancellables)
+    }
+    
+    private func isValidEmail(_ email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
     }
 }

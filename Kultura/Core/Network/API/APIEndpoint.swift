@@ -15,18 +15,27 @@ struct APIEndpoint{
     static func login(email: String, password: String) -> APIEndpoint{
         let parameters = ["email": email, "password": password]
         let body = try? JSONSerialization.data(withJSONObject: parameters)
-        return APIEndpoint(url: "https://api.kultura.com/login", method: "POST", body: body)
+        return APIEndpoint(
+            url: "http://kultura-001-site1.ktempurl.com/api/auth/login", 
+            method: "POST", 
+            body: body
+        )
     }
     
-    static func signup(name: String, surname: String, email: String, password: String) -> APIEndpoint{
+    static func signup(email: String, fullName: String, age: Int, password: String) -> APIEndpoint{
         let parameters = [
-            "name": name,
-            "surname": surname,
             "email": email,
+            "fullName": fullName,
+            "age": age,
             "password": password
-        ]
+        ] as [String : Any]
+        
         let body = try? JSONSerialization.data(withJSONObject: parameters)
-        return APIEndpoint(url: "https://api.kultura.com/signup", method: "POST", body: body)
+        return APIEndpoint(
+            url: "http://kultura-001-site1.ktempurl.com/api/Auth/Register",
+            method: "POST",
+            body: body
+        )
     }
     
 }

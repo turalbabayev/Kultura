@@ -72,7 +72,7 @@ struct LoginView: View {
                                 title: viewModel.isLoading ? "Loading..." : "Log in",
                                 action: {
                                     viewModel.login()
-                                    apiManager.makeAPIRequest()
+                                    //apiManager.makeAPIRequest()
                                     //navigateToTabBar = true // Geçiş tetikleniyor
                                 },
                                 backgroundColor: .white,
@@ -93,6 +93,8 @@ struct LoginView: View {
                         .padding(.bottom, keyboardManager.keyboardHeight)
                         .animation(.easeOut(duration: 0.2), value: keyboardManager.keyboardHeight)
                     }
+                    .navigationBarBackButtonHidden(true)
+                    .navigationBarHidden(true)
                     .navigationDestination(isPresented: $viewModel.isLoginSuccessful) {
                         TabBarView() // Geçiş yapılacak görünüm
                     }
