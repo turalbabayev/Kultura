@@ -35,5 +35,14 @@ struct KulturaApp: App {
         Resolver.register{
             LoginViewModel(authService: Resolver.resolve())
         }
+        
+        Resolver.register {
+            RestaurantService(repository: RestaurantRepository(apiManager: APIManager()))
+        }
+        .scope(.shared)
+        
+        Resolver.register {
+            HomeViewModel(restaurantService: Resolver.resolve())
+        }
     }
 }

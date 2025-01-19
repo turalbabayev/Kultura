@@ -108,20 +108,3 @@ struct CustomRestaurantView: View {
     }
 }
 
-#Preview {
-    CustomRestaurantView(restaurant: Restaurant(
-        name: "Coffemania Narimanov",
-        rating: 4.4,
-        priceRange: "30-40 AZN",
-        image: Image("r1"),
-        leftIcon: Image(systemName: "circle.fill"),
-        rightIcon: Image(systemName: "xmark"),
-        leftIconColor: .green,
-        hasBorder: true // Border var
-    )) {
-        print("left icon tapped")
-    } onRightIconTap: {
-        print("right icon tapped")
-    }
-
-}

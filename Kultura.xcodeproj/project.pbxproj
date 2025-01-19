@@ -93,6 +93,14 @@
 		F6D029442D1B28FE003A53F6 /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D029432D1B28FA003A53F6 /* ReviewsView.swift */; };
 		F6D029472D1B4C05003A53F6 /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D029462D1B4C03003A53F6 /* TicketView.swift */; };
 		F6D0294A2D1B5096003A53F6 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D029492D1B5093003A53F6 /* AccountView.swift */; };
+		F6D0F9252D3D43E900FC6AFC /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D0F9242D3D43E900FC6AFC /* LoginResponse.swift */; };
+		F6D0F9272D3D484F00FC6AFC /* SignupResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D0F9262D3D484F00FC6AFC /* SignupResponse.swift */; };
+		F6D0F9292D3D753400FC6AFC /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D0F9282D3D753400FC6AFC /* Restaurant.swift */; };
+		F6D0F92C2D3D75BD00FC6AFC /* RestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D0F92B2D3D75B200FC6AFC /* RestaurantRepository.swift */; };
+		F6D0F92E2D3D75F100FC6AFC /* RestaurantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D0F92D2D3D75F100FC6AFC /* RestaurantService.swift */; };
+		F6D0F9322D3D761900FC6AFC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D0F9312D3D761900FC6AFC /* HomeViewModel.swift */; };
+		F6D0F9342D3D76D900FC6AFC /* UIRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D0F9332D3D76D900FC6AFC /* UIRestaurant.swift */; };
+		F6D0F9362D3D78FA00FC6AFC /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D0F9352D3D78FA00FC6AFC /* AsyncImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,6 +210,14 @@
 		F6D029432D1B28FA003A53F6 /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
 		F6D029462D1B4C03003A53F6 /* TicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
 		F6D029492D1B5093003A53F6 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		F6D0F9242D3D43E900FC6AFC /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		F6D0F9262D3D484F00FC6AFC /* SignupResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupResponse.swift; sourceTree = "<group>"; };
+		F6D0F9282D3D753400FC6AFC /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		F6D0F92B2D3D75B200FC6AFC /* RestaurantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantRepository.swift; sourceTree = "<group>"; };
+		F6D0F92D2D3D75F100FC6AFC /* RestaurantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantService.swift; sourceTree = "<group>"; };
+		F6D0F9312D3D761900FC6AFC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F6D0F9332D3D76D900FC6AFC /* UIRestaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRestaurant.swift; sourceTree = "<group>"; };
+		F6D0F9352D3D78FA00FC6AFC /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +258,7 @@
 		F63972D92D184DD900107557 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F6D0F9312D3D761900FC6AFC /* HomeViewModel.swift */,
 				F63972E02D18733A00107557 /* SectionView.swift */,
 				F63972DA2D184DDD00107557 /* HomeView.swift */,
 			);
@@ -441,6 +458,10 @@
 		F685F2D32D066FE400090EBF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F6D0F9332D3D76D900FC6AFC /* UIRestaurant.swift */,
+				F6D0F9282D3D753400FC6AFC /* Restaurant.swift */,
+				F6D0F9262D3D484F00FC6AFC /* SignupResponse.swift */,
+				F6D0F9242D3D43E900FC6AFC /* LoginResponse.swift */,
 				F6CD6B6E2D3C48C200E0FEFA /* APIError.swift */,
 				F6CD6B6C2D3C489E00E0FEFA /* APIResponse.swift */,
 				F6AEBEF32D1EB107006945D0 /* TableModel.swift */,
@@ -462,6 +483,7 @@
 		F685F2D52D066FF200090EBF /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F6D0F92D2D3D75F100FC6AFC /* RestaurantService.swift */,
 				F66DC3A22D21E6010062B1E8 /* AuthService.swift */,
 			);
 			path = Services;
@@ -506,6 +528,7 @@
 		F685F2DA2D06705000090EBF /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				F6D0F92B2D3D75B200FC6AFC /* RestaurantRepository.swift */,
 				F66DC3A62D21EE790062B1E8 /* AuthRepository.swift */,
 			);
 			path = Repositories;
@@ -625,6 +648,7 @@
 		F6BD9FE12D173D67008B920C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F6D0F9352D3D78FA00FC6AFC /* AsyncImageView.swift */,
 				F66DC39A2D21B8660062B1E8 /* InfoRowView.swift */,
 				F6AEBEED2D1E930F006945D0 /* Table.swift */,
 				F6AEBEE92D1CACC4006945D0 /* TimePicker.swift */,
@@ -840,6 +864,7 @@
 				F63972EB2D188E1300107557 /* EditProfileView.swift in Sources */,
 				F6D0293C2D1B1478003A53F6 /* RestaurantDetailView.swift in Sources */,
 				F6D029342D19F426003A53F6 /* CustomListView.swift in Sources */,
+				F6D0F9272D3D484F00FC6AFC /* SignupResponse.swift in Sources */,
 				F6BD9FE32D173D7D008B920C /* CustomButton.swift in Sources */,
 				F6D029362D1AF57A003A53F6 /* CustomRestaurantView.swift in Sources */,
 				F6BD9FD12D172C46008B920C /* AppCoordinator.swift in Sources */,
@@ -848,15 +873,20 @@
 				F6AEBEF02D1EAED2006945D0 /* RestaurantMapView.swift in Sources */,
 				F6AEBEE82D1CA5DB006945D0 /* Stepper.swift in Sources */,
 				F64678882D179FB800EBCBCA /* SignupViewModel.swift in Sources */,
+				F6D0F9342D3D76D900FC6AFC /* UIRestaurant.swift in Sources */,
 				F64678802D178E4F00EBCBCA /* KeyboardManager.swift in Sources */,
 				F6AEBEEA2D1CACCD006945D0 /* TimePicker.swift in Sources */,
 				F6AEBEF42D1EB10D006945D0 /* TableModel.swift in Sources */,
 				F63972DF2D18637500107557 /* KulturaSearchTextField.swift in Sources */,
 				F63972D82D184B5100107557 /* TabBarItem.swift in Sources */,
+				F6D0F9322D3D761900FC6AFC /* HomeViewModel.swift in Sources */,
 				F685F2A12D066DDB00090EBF /* ContentView.swift in Sources */,
 				F63972E12D18733F00107557 /* SectionView.swift in Sources */,
 				F6D0294A2D1B5096003A53F6 /* AccountView.swift in Sources */,
+				F6D0F9292D3D753400FC6AFC /* Restaurant.swift in Sources */,
+				F6D0F9362D3D78FA00FC6AFC /* AsyncImageView.swift in Sources */,
 				F6CD6B6F2D3C48C900E0FEFA /* APIError.swift in Sources */,
+				F6D0F92E2D3D75F100FC6AFC /* RestaurantService.swift in Sources */,
 				F646787E2D178C3F00EBCBCA /* LoginViewModel.swift in Sources */,
 				F685F29F2D066DDB00090EBF /* KulturaApp.swift in Sources */,
 				F6D029402D1B2273003A53F6 /* TabContentView.swift in Sources */,
@@ -875,6 +905,7 @@
 				F66DC39D2D21E42E0062B1E8 /* User.swift in Sources */,
 				F66DC3A72D21EE7E0062B1E8 /* AuthRepository.swift in Sources */,
 				F63972D62D1849FB00107557 /* TabBarView.swift in Sources */,
+				F6D0F9252D3D43E900FC6AFC /* LoginResponse.swift in Sources */,
 				F66DC39F2D21E5E70062B1E8 /* APIEndpoint.swift in Sources */,
 				F6AEBEE12D1C94E3006945D0 /* CustomDatePicker.swift in Sources */,
 				F6AEBEEE2D1E9311006945D0 /* Table.swift in Sources */,
@@ -886,6 +917,7 @@
 				F64678822D17929C00EBCBCA /* GradientBackground.swift in Sources */,
 				F6AEBEF62D1EB130006945D0 /* TableType.swift in Sources */,
 				F6AEBEEC2D1D787A006945D0 /* ReservationInfoView.swift in Sources */,
+				F6D0F92C2D3D75BD00FC6AFC /* RestaurantRepository.swift in Sources */,
 				F6D029422D1B255D003A53F6 /* ContactView.swift in Sources */,
 				F6BD9FDB2D17300E008B920C /* LoginView.swift in Sources */,
 				F6BD9FDE2D17353E008B920C /* SignupView.swift in Sources */,

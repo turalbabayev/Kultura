@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import Resolver
 
 struct HomeView: View {
+    @InjectedObject private var viewModel: HomeViewModel
+    
     var body: some View {
-        NavigationStack {
+        NavigationView {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16){
                     HStack{
@@ -28,6 +31,7 @@ struct HomeView: View {
 
                             
                             Button(action: {
+                                print("Acc Tokenim: \(AuthManager.shared.getToken() ?? "N/A")")
                                 print("My Reservations")
                             }) {
                                 Image("bill")
@@ -40,29 +44,29 @@ struct HomeView: View {
                     
                     KulturaSearchTextField(isSearchPage: true)
                     
-                    SectionView(title: "Popular Right Now", items: [
-                        HomeRestaurantCardView(imageName: "placeholder", title: "Qaynana Restaurant", rating: 4.7, actionText: "Reserve now"),
-                        HomeRestaurantCardView(imageName: "placeholder", title: "Coffemania Narimanov", rating: 5.0, actionText: "Reserve now"),
-                        HomeRestaurantCardView(imageName: "placeholder", title: "Coffemania Narimanov", rating: 5.0, actionText: "Reserve now")
-                    ], seeAll: {})
-
-                    SectionView(title: "Offers near you", items: [
-                        HomeRestaurantCardView(imageName: "placeholder", title: "Early Bird Cafe", rating: 4.5, actionText: "Reserve now"),
-                        HomeRestaurantCardView(imageName: "placeholder", title: "Morning Glory", rating: 4.9, actionText: "Reserve now"),
-                        HomeRestaurantCardView(imageName: "placeholder", title: "Morning Glory", rating: 4.9, actionText: "Reserve now"),
-                        
-                    ], seeAll: {})
-                    
-                    SectionView(title: "Breakfast", items: [
-                        HomeRestaurantCardView(imageName: "placeholder", title: "Early Bird Cafe", rating: 4.5, actionText: "Reserve now"),
-                        HomeRestaurantCardView(imageName: "placeholder", title: "Morning Glory", rating: 4.9, actionText: "Reserve now"),
-                        HomeRestaurantCardView(imageName: "placeholder", title: "Morning Glory", rating: 4.9, actionText: "Reserve now"),
-                        
-                    ], seeAll: {})
+                    // Popular Right Now Section
+                    SectionView(title: "Popular Right Now", items: viewModel.restaurants.map { restaurant in
+                        HomeRestaurantCardView(
+                            restaurant: restaurant,
+                            actionText: "Reserve now"
+                        )
+                    }, seeAll: {})
                 }
-                
-                
-
+            }
+            .onAppear {
+                viewModel.fetchRestaurants()
+            }
+            .overlay {
+                if viewModel.isLoading {
+                    ProgressView()
+                }
+            }
+            .alert("Hata", isPresented: .constant(viewModel.errorMessage != nil)) {
+                Button("Tamam", role: .cancel) {
+                    viewModel.errorMessage = nil
+                }
+            } message: {
+                Text(viewModel.errorMessage ?? "")
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(.top, 20)

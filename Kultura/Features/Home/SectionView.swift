@@ -55,11 +55,3 @@ struct SectionView: View {
 
 }
 
-#Preview {
-    SectionView(title: "Discover All Restaurants", items: [
-        HomeRestaurantCardView(imageName: "placeholder", title: "Qaynana Restaurant", rating: 4.7, actionText: "Reserve now"),
-        HomeRestaurantCardView(imageName: "placeholder", title: "Qaynana Restaurant", rating: 4.7, actionText: "Reserve now"),
-        HomeRestaurantCardView(imageName: "placeholder", title: "Qaynana Restaurant", rating: 4.7, actionText: "Reserve now"),
-
-    ], seeAll: {})
-}

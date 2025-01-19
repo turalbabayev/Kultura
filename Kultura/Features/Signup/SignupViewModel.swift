@@ -57,12 +57,11 @@ class SignupViewModel: ObservableObject{
         
         authService.signup(email: email, fullName: fullName, age: ageInt, password: password)
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] completion in
+            .sink(receiveCompletion: { [weak self] (completion: Subscribers.Completion<Error>) in
                 guard let self = self else { return }
                 self.isLoading = false
                 
-                switch completion {
-                case .failure(let error):
+                if case .failure(let error) = completion {
                     if let apiError = error as? APIError {
                         switch apiError {
                         case .serverError(let message):
@@ -73,15 +72,15 @@ class SignupViewModel: ObservableObject{
                     } else {
                         self.errorMessage = error.localizedDescription
                     }
-                case .finished:
-                    break
                 }
-            } receiveValue: { [weak self] _ in
+            }, receiveValue: { [weak self] (response: SignupResponse) in
                 guard let self = self else { return }
-                print("Signup successful, navigating to login...")
-                self.isSignupSuccessful = true
-                print("isSignupSuccessful set to: \(self.isSignupSuccessful)")
-            }
+                if response.success {
+                    self.isSignupSuccessful = true
+                } else {
+                    self.errorMessage = response.errorMessage ?? "Kayıt işlemi başarısız"
+                }
+            })
             .store(in: &cancellables)
     }
     

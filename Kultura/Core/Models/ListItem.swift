@@ -13,5 +13,4 @@ struct ListItem: Identifiable {
     let destination: AnyView?
     let trailingView: AnyView? // Sağdaki özel görünüm
     var isToggled: Bool? // Eğer bir Toggle varsa, durumu buradan takip edilecek
-
 }

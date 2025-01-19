@@ -7,22 +7,33 @@
 
 import Foundation
 
-struct APIEndpoint{
-    let url: String
+struct APIEndpoint {
+    private let baseURL = "http://kultura-001-site1.ktempurl.com/api"
+    let path: String
     let method: String
     let body: Data?
     
-    static func login(email: String, password: String) -> APIEndpoint{
+    var url: String {
+        return baseURL + path
+    }
+    
+    private init(path: String, method: String, body: Data? = nil) {
+        self.path = path
+        self.method = method
+        self.body = body
+    }
+    
+    static func login(email: String, password: String) -> APIEndpoint {
         let parameters = ["email": email, "password": password]
         let body = try? JSONSerialization.data(withJSONObject: parameters)
         return APIEndpoint(
-            url: "http://kultura-001-site1.ktempurl.com/api/auth/login", 
-            method: "POST", 
+            path: "/Auth/Login",
+            method: "POST",
             body: body
         )
     }
     
-    static func signup(email: String, fullName: String, age: Int, password: String) -> APIEndpoint{
+    static func signup(email: String, fullName: String, age: Int, password: String) -> APIEndpoint {
         let parameters = [
             "email": email,
             "fullName": fullName,
@@ -32,10 +43,16 @@ struct APIEndpoint{
         
         let body = try? JSONSerialization.data(withJSONObject: parameters)
         return APIEndpoint(
-            url: "http://kultura-001-site1.ktempurl.com/api/Auth/Register",
+            path: "/Auth/Register",
             method: "POST",
             body: body
         )
     }
     
+    static func getAllRestaurants() -> APIEndpoint {
+        return APIEndpoint(
+            path: "/User/getAll-Restaurants",
+            method: "GET"
+        )
+    }
 }

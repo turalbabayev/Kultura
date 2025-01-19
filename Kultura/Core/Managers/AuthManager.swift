@@ -10,41 +10,29 @@ import Security
 
 final class AuthManager {
     static let shared = AuthManager()
-    private let tokenKey = "userAuthToken"
+    private let tokenKey = "authToken"
+    private let refreshTokenKey = "refreshToken"
     
     private init() {}
     
     func saveToken(_ token: String) {
-        let data = Data(token.utf8)
-        let query: [String: Any] = [
-            kSecClass as String: kSecClassGenericPassword,
-            kSecAttrAccount as String: tokenKey,
-            kSecValueData as String: data
-        ]
-        SecItemDelete(query as CFDictionary)
-        SecItemAdd(query as CFDictionary, nil)
+        UserDefaults.standard.set(token, forKey: tokenKey)
+    }
+    
+    func saveRefreshToken(_ token: String) {
+        UserDefaults.standard.set(token, forKey: refreshTokenKey)
     }
     
     func getToken() -> String? {
-        let query: [String: Any] = [
-            kSecClass as String: kSecClassGenericPassword,
-            kSecAttrAccount as String: tokenKey,
-            kSecReturnData as String: true
-        ]
-        var item: CFTypeRef?
-        if SecItemCopyMatching(query as CFDictionary, &item) == errSecSuccess {
-            if let data = item as? Data {
-                return String(data: data, encoding: .utf8)
-            }
-        }
-        return nil
+        return UserDefaults.standard.string(forKey: tokenKey)
     }
     
-    func deleteToken() {
-        let query: [String: Any] = [
-            kSecClass as String: kSecClassGenericPassword,
-            kSecAttrAccount as String: tokenKey
-        ]
-        SecItemDelete(query as CFDictionary)
+    func getRefreshToken() -> String? {
+        return UserDefaults.standard.string(forKey: refreshTokenKey)
+    }
+    
+    func clearTokens() {
+        UserDefaults.standard.removeObject(forKey: tokenKey)
+        UserDefaults.standard.removeObject(forKey: refreshTokenKey)
     }
 }

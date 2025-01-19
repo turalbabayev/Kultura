@@ -14,13 +14,13 @@ struct ContentView: View {
     var body: some View {
         
         //RestaurantMapView()
-        SignupView()
-        /*
+        //SignupView()
+        
         appCoordinator.start()
             .onReceive(appCoordinator.$currentView) { newView in
                 // Ekranı güncellemek için dinamik olarak izleme
             }
-         */
+         
         
         
     }

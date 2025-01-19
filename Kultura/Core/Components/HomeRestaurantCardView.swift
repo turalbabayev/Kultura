@@ -8,23 +8,28 @@
 import SwiftUI
 
 struct HomeRestaurantCardView: View {
-    var imageName: String
-    var title: String
-    var rating: Double
-    var actionText: String
+    let restaurant: UIRestaurant
+    let actionText: String
     
-
     var body: some View {
         VStack(alignment: .leading){
             ZStack(alignment: .topTrailing){
-                Rectangle()
-                    .fill(Color.gray.opacity(0.2))
-                    .cornerRadius(12)
-                    .frame(height: 130) // Kartın resim alanı yüksekliği
+                if let mainPhoto = restaurant.mainPhotoURL {
+                    AsyncImageView(url: mainPhoto)
+                        .frame(height: 130)
+                        .cornerRadius(12)
+                        .clipped()
+                } else {
+                    Image("placeholder")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(height: 130)
+                        .cornerRadius(12)
+                        .clipped()
+                }
                 
                 Button(action: {
-                    // Favori ekleme işlemi
-                    print("\(title) favorilere eklendi.")
+                    print("\(restaurant.name) favorilere eklendi.")
                 }) {
                     Image(systemName: "heart")
                         .foregroundColor(.gray)
@@ -36,7 +41,7 @@ struct HomeRestaurantCardView: View {
                 .padding(8)
             }
             
-            Text(title)
+            Text(restaurant.name)
                 .font(.system(size: 16, weight: .bold))
                 .lineLimit(1)
             
@@ -47,7 +52,7 @@ struct HomeRestaurantCardView: View {
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
                     .font(.system(size: 14))
-                Text(String(format: "%.1f", rating))
+                Text(String(format: "%.1f", restaurant.rating))
                     .font(.system(size: 14))
                     .foregroundColor(.black)
             }
@@ -58,14 +63,8 @@ struct HomeRestaurantCardView: View {
 
             Spacer()
         }
-        //.padding()
         .background(Color("appSecondary"))
         .cornerRadius(12)
-        //.shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
     }
 }
 
-
-#Preview {
-    HomeRestaurantCardView(imageName: "", title: "Qaynana Restoran", rating: 4.8, actionText: "Reserve Now")
-}

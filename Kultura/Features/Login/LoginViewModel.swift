@@ -30,7 +30,7 @@ class LoginViewModel: ObservableObject{
         
         //Doğrulama
         guard !email.isEmpty, !password.isEmpty else {
-            errorMessage = "Email and password cannot be empty."
+            errorMessage = "Email ve şifre boş olamaz."
             return
         }
         
@@ -40,22 +40,32 @@ class LoginViewModel: ObservableObject{
         // Servis Çağrısı
         authService.login(email: email, password: password)
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] completion in
+            .sink(receiveCompletion: { [weak self] (completion: Subscribers.Completion<Error>) in
                 guard let self = self else { return }
                 self.isLoading = false
-                switch completion {
-                case .failure(let error):
-                    self.errorMessage = error.localizedDescription
-                case .finished:
-                    break
+                
+                if case .failure(let error) = completion {
+                    if let apiError = error as? APIError {
+                        switch apiError {
+                        case .serverError(let message):
+                            self.errorMessage = message
+                        default:
+                            self.errorMessage = "Bir hata oluştu. Lütfen tekrar deneyin."
+                        }
+                    } else {
+                        self.errorMessage = error.localizedDescription
+                    }
                 }
-            } receiveValue: { [weak self] user in
-                guard self != nil else { return }
-                if let token = user.token {
-                    AuthManager.shared.saveToken(token) // Token'ı kaydet
-                }
-                self?.isLoginSuccessful = true // Başarılı Durumu
-            }
+            }, receiveValue: { [weak self] (response: LoginResponse) in
+                guard let self = self else { return }
+                
+                // Token'ları kaydet
+                AuthManager.shared.saveToken(response.accessToken)
+                AuthManager.shared.saveRefreshToken(response.refreshToken)
+                
+                // Login başarılı, TabBarView'a yönlendir
+                self.isLoginSuccessful = true
+            })
             .store(in: &cancellables)
     }
     

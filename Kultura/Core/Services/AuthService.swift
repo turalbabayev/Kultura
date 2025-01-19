@@ -15,12 +15,11 @@ final class AuthService {
         self.repository = repository
     }
     
-    func login(email: String, password: String) -> AnyPublisher<User, Error> {
-        print("auth service login")
+    func login(email: String, password: String) -> AnyPublisher<LoginResponse, Error> {
         return repository.login(email: email, password: password)
     }
     
-    func signup(email: String, fullName: String, age: Int, password: String) -> AnyPublisher<User, Error> {
+    func signup(email: String, fullName: String, age: Int, password: String) -> AnyPublisher<SignupResponse, Error> {
         return repository.signup(email: email, fullName: fullName, age: age, password: password)
     }
 }
