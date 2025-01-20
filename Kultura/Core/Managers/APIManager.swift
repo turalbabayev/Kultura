@@ -12,33 +12,24 @@ final class APIManager {
     
     private func handleResponse<T: Codable>(_ data: Data) throws -> T {
         if let responseString = String(data: data, encoding: .utf8) {
-            print("API Response: \(responseString)")
+            //print("API Response Data: \(responseString)")
         }
         
         let decoder = JSONDecoder()
         do {
-            // Debug için tip bilgisini yazdıralım
-            print("Trying to decode as type: \(T.self)")
+            // UserIDResponse için özel kontrol
+            if T.self == UserIDResponse.self {
+                return try decoder.decode(T.self, from: data)
+            }
             
             // Login ve Signup için özel kontroller
             if T.self == LoginResponse.self || T.self == SignupResponse.self {
-                let response = try decoder.decode(T.self, from: data)
-                return response
+                return try decoder.decode(T.self, from: data)
             }
             
             // RestaurantResponse için özel kontrol
             if T.self == RestaurantResponse.self {
-                do {
-                    let response = try decoder.decode(RestaurantResponse.self, from: data)
-                    print("Successfully decoded RestaurantResponse")
-                    print("Success: \(response.success)")
-                    print("Message: \(response.message)")
-                    print("Restaurant count: \(response.data.restaurants.count)")
-                    return response as! T
-                } catch {
-                    print("RestaurantResponse decode error: \(error)")
-                    throw error
-                }
+                return try decoder.decode(RestaurantResponse.self, from: data) as! T
             }
             
             // Diğer response'lar için generic handling
@@ -51,21 +42,17 @@ final class APIManager {
             }
             throw APIError.decodingError
         } catch {
-            print("Decoding Error Details: \(error)")
+            print("Decoding Error: \(error)")
             if let decodingError = error as? DecodingError {
                 switch decodingError {
                 case .keyNotFound(let key, let context):
                     print("Key '\(key)' not found: \(context.debugDescription)")
-                    print("Coding path: \(context.codingPath)")
                 case .typeMismatch(let type, let context):
                     print("Type '\(type)' mismatch: \(context.debugDescription)")
-                    print("Coding path: \(context.codingPath)")
                 case .valueNotFound(let type, let context):
                     print("Value of type '\(type)' not found: \(context.debugDescription)")
-                    print("Coding path: \(context.codingPath)")
                 case .dataCorrupted(let context):
                     print("Data corrupted: \(context.debugDescription)")
-                    print("Coding path: \(context.codingPath)")
                 @unknown default:
                     print("Unknown decoding error")
                 }
@@ -83,23 +70,26 @@ final class APIManager {
         request.httpMethod = endpoint.method
         request.httpBody = endpoint.body
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.timeoutInterval = 30
-        
-        if let body = endpoint.body, let bodyString = String(data: body, encoding: .utf8) {
-            print("Request Body: \(bodyString)")
-        }
         
         if let token = AuthManager.shared.getToken() {
+            print("Token being sent: \(token)") // Debug için
             request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        } else {
+            print("No token found") // Debug için
         }
         
         return URLSession.shared.dataTaskPublisher(for: request)
             .tryMap { data, response -> T in
+                if let httpResponse = response as? HTTPURLResponse {
+                    print("Status Code: \(httpResponse.statusCode)") // HTTP status
+                    if let responseString = String(data: data, encoding: .utf8) {
+                        //print("Response Data: \(responseString)") // Response body
+                    }
+                }
+                
                 guard let httpResponse = response as? HTTPURLResponse else {
                     throw APIError.invalidResponse
                 }
-                
-                print("Status Code: \(httpResponse.statusCode)")
                 
                 if !(200...299).contains(httpResponse.statusCode) {
                     throw APIError.serverError("Server error: \(httpResponse.statusCode)")
@@ -108,7 +98,7 @@ final class APIManager {
                 return try self.handleResponse(data)
             }
             .mapError { error -> Error in
-                print("API Error: \(error)")
+                print("Network Error: \(error)") // Network error
                 if let apiError = error as? APIError {
                     return apiError
                 }

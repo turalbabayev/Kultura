@@ -16,20 +16,20 @@ struct HomeRestaurantCardView: View {
             ZStack(alignment: .topTrailing){
                 if let mainPhoto = restaurant.mainPhotoURL {
                     AsyncImageView(url: mainPhoto)
-                        .frame(height: 130)
+                        .frame(height: 120)
                         .cornerRadius(12)
                         .clipped()
                 } else {
                     Image("placeholder")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(height: 130)
+                        .frame(height: 120)
                         .cornerRadius(12)
                         .clipped()
                 }
                 
                 Button(action: {
-                    print("\(restaurant.name) favorilere eklendi.")
+                    
                 }) {
                     Image(systemName: "heart")
                         .foregroundColor(.gray)
@@ -57,10 +57,13 @@ struct HomeRestaurantCardView: View {
                     .foregroundColor(.black)
             }
             
-            Text(actionText)
-                .font(.system(size: 14, weight: .regular))
-                .foregroundColor(.black)
-
+            NavigationLink(destination: RestaurantDetailView(restaurant: restaurant.originalRestaurant)) {
+                Text(actionText)
+                    .font(.system(size: 14, weight: .regular))
+                    .foregroundColor(.black)
+            }
+            
+            
             Spacer()
         }
         .background(Color("appSecondary"))

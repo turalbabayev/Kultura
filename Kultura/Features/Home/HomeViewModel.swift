@@ -11,6 +11,7 @@ import Combine
 
 class HomeViewModel: ObservableObject {
     @Published var restaurants: [UIRestaurant] = []
+    @Published var topRestaurants: [UIRestaurant] = []
     @Published var errorMessage: String?
     @Published var isLoading: Bool = false
     
@@ -21,46 +22,57 @@ class HomeViewModel: ObservableObject {
         self.restaurantService = restaurantService
     }
     
-    func fetchRestaurants() {
+    func onAppear() {
         isLoading = true
-        errorMessage = nil
         
-        restaurantService.getAllRestaurants()
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] completion in
-                guard let self = self else { return }
-                self.isLoading = false
-                
-                if case .failure(let error) = completion {
-                    print("Restaurant Fetch Error: \(error)")
-                    if let decodingError = error as? DecodingError {
-                        switch decodingError {
-                        case .keyNotFound(let key, let context):
-                            self.errorMessage = "Key not found: \(key), context: \(context.debugDescription)"
-                        case .typeMismatch(let type, let context):
-                            self.errorMessage = "Type mismatch: expected \(type), context: \(context.debugDescription)"
-                        case .valueNotFound(let type, let context):
-                            self.errorMessage = "Value not found: \(type), context: \(context.debugDescription)"
-                        case .dataCorrupted(let context):
-                            self.errorMessage = "Data corrupted: \(context.debugDescription)"
-                        @unknown default:
-                            self.errorMessage = "Unknown decoding error"
-                        }
-                    } else if let apiError = error as? APIError {
-                        switch apiError {
-                        case .serverError(let message):
-                            self.errorMessage = message
-                        default:
-                            self.errorMessage = "Bir hata oluştu. Lütfen tekrar deneyin."
-                        }
-                    } else {
-                        self.errorMessage = error.localizedDescription
-                    }
-                }
-            } receiveValue: { [weak self] apiRestaurants in
-                print("Received restaurants: \(apiRestaurants.count)")
-                self?.restaurants = apiRestaurants.map { UIRestaurant.fromAPI($0) }
+        // Tüm çağrıları birleştirip tek seferde yapabiliriz
+        Publishers.CombineLatest(
+            restaurantService.getAllRestaurants(),
+            restaurantService.getTop5Restaurants()
+        )
+        .sink(receiveCompletion: { [weak self] completion in
+            self?.isLoading = false
+            if case .failure(let error) = completion {
+                self?.handleError(error)
             }
-            .store(in: &cancellables)
+        }, receiveValue: { [weak self] (allRestaurants, topRestaurants) in
+            self?.restaurants = allRestaurants.map(UIRestaurant.fromAPI)
+            self?.topRestaurants = topRestaurants.map(UIRestaurant.fromAPI)
+        })
+        .store(in: &cancellables)
+    }
+    
+    private func handleError(_ error: Error) {
+        if let decodingError = error as? DecodingError {
+            handleDecodingError(decodingError)
+        } else if let apiError = error as? APIError {
+            handleAPIError(apiError)
+        } else {
+            errorMessage = error.localizedDescription
+        }
+    }
+    
+    private func handleDecodingError(_ error: DecodingError) {
+        switch error {
+        case .keyNotFound(let key, _):
+            errorMessage = "Veri yapısında eksik alan: \(key)"
+        case .typeMismatch(_, _):
+            errorMessage = "Veri tipi uyuşmazlığı"
+        case .valueNotFound(_, _):
+            errorMessage = "Gerekli değer bulunamadı"
+        case .dataCorrupted(_):
+            errorMessage = "Veri bozuk"
+        @unknown default:
+            errorMessage = "Bilinmeyen bir hata oluştu"
+        }
+    }
+    
+    private func handleAPIError(_ error: APIError) {
+        switch error {
+        case .serverError(let message):
+            errorMessage = message
+        default:
+            errorMessage = "Bir hata oluştu. Lütfen tekrar deneyin."
+        }
     }
 } 

@@ -55,4 +55,25 @@ struct APIEndpoint {
             method: "GET"
         )
     }
+
+    static func getTop5Restaurants() -> APIEndpoint {
+    return APIEndpoint(
+        path: "/User/getTop5-ForRaitingRestaurants",
+        method: "GET"
+    )
+}
+
+static func getUserId() -> APIEndpoint {
+    return APIEndpoint(
+        path: "/User/getId",
+        method: "GET"
+    )
+}
+
+static func addFavorite(userId: String, restaurantId: String) -> APIEndpoint {
+    return APIEndpoint(
+        path: "/User/add-favourites?userId=\(userId)&restaurantId=\(restaurantId)",
+        method: "POST"
+    )
+}
 }

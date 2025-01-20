@@ -19,4 +19,8 @@ final class RestaurantService {
     func getAllRestaurants() -> AnyPublisher<[APIRestaurant], Error> {
         return repository.getAllRestaurants()
     }
+    
+    func getTop5Restaurants() -> AnyPublisher<[APIRestaurant], Error> {
+        return repository.getTop5Restaurants()
+    }
 } 

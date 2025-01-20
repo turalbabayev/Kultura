@@ -11,6 +11,9 @@ import Resolver
 @main
 struct KulturaApp: App {
     init() {
+        // Uygulama başlatıldığında token'ları temizle
+        AuthManager.shared.clearTokens()
+        
         // Resolver DI Kayıtları
         registerDependencies()
     }
@@ -18,6 +21,10 @@ struct KulturaApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                // Uygulama arka plana geçtiğinde token'ları temizle
+                .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
+                    AuthManager.shared.clearTokens()
+                }
         }
     }
 

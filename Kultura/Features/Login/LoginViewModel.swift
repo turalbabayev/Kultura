@@ -8,65 +8,59 @@
 import SwiftUI
 import Combine
 
-class LoginViewModel: ObservableObject{
-    @Published var email: String = ""
-    @Published var password: String = ""
+class LoginViewModel: ObservableObject {
+    @Published var email = ""
+    @Published var password = ""
+    @Published var isLoading = false
+    @Published var errorMessage: String?
+    @Published var isLoggedIn = false
     
     private let authService: AuthService
     private var cancellables = Set<AnyCancellable>()
     
-    // UI için kontrol değişkenleri
-    @Published var errorMessage: String? = nil
-    @Published var isLoading: Bool = false
-    @Published var isLoginSuccessful: Bool = false
-
-
-    
-    init(authService: AuthService){
+    init(authService: AuthService) {
         self.authService = authService
     }
     
-    func login(){
-        
-        //Doğrulama
-        guard !email.isEmpty, !password.isEmpty else {
-            errorMessage = "Email ve şifre boş olamaz."
-            return
-        }
-        
+    func login() {
         isLoading = true
         errorMessage = nil
         
-        // Servis Çağrısı
+        // Önceki oturumu temizle
+        AuthManager.shared.clearTokens()
+        
         authService.login(email: email, password: password)
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { [weak self] (completion: Subscribers.Completion<Error>) in
-                guard let self = self else { return }
-                self.isLoading = false
-                
+            .sink { [weak self] completion in
+                self?.isLoading = false
                 if case .failure(let error) = completion {
-                    if let apiError = error as? APIError {
-                        switch apiError {
-                        case .serverError(let message):
-                            self.errorMessage = message
-                        default:
-                            self.errorMessage = "Bir hata oluştu. Lütfen tekrar deneyin."
-                        }
-                    } else {
-                        self.errorMessage = error.localizedDescription
-                    }
+                    self?.handleError(error)
                 }
-            }, receiveValue: { [weak self] (response: LoginResponse) in
-                guard let self = self else { return }
-                
-                // Token'ları kaydet
-                AuthManager.shared.saveToken(response.accessToken)
-                AuthManager.shared.saveRefreshToken(response.refreshToken)
-                
-                // Login başarılı, TabBarView'a yönlendir
-                self.isLoginSuccessful = true
-            })
+            } receiveValue: { [weak self] response in
+                self?.handleLoginResponse(response)
+            }
             .store(in: &cancellables)
     }
     
+    private func handleError(_ error: Error) {
+        if let apiError = error as? APIError {
+            switch apiError {
+            case .serverError(let message):
+                errorMessage = message
+            default:
+                errorMessage = "Bir hata oluştu. Lütfen tekrar deneyin."
+            }
+        } else {
+            errorMessage = error.localizedDescription
+        }
+    }
+    
+    private func handleLoginResponse(_ response: LoginResponse) {
+        if response.success {
+            isLoggedIn = true
+        } else {
+            errorMessage = response.message
+        }
+    }
 }
+

@@ -12,6 +12,7 @@ import Combine
 protocol AuthRepositoryProtocol {
     func login(email: String, password: String) -> AnyPublisher<LoginResponse, Error>
     func signup(email: String, fullName: String, age: Int, password: String) -> AnyPublisher<SignupResponse, Error>
+    func getUserId() -> AnyPublisher<UserIDResponse, Error>
 }
 
 class AuthRepository: AuthRepositoryProtocol {
@@ -28,6 +29,11 @@ class AuthRepository: AuthRepositoryProtocol {
     
     func signup(email: String, fullName: String, age: Int, password: String) -> AnyPublisher<SignupResponse, Error> {
         let endpoint = APIEndpoint.signup(email: email, fullName: fullName, age: age, password: password)
+        return apiManager.performRequest(endpoint: endpoint)
+    }
+    
+    func getUserId() -> AnyPublisher<UserIDResponse, Error> {
+        let endpoint = APIEndpoint.getUserId()
         return apiManager.performRequest(endpoint: endpoint)
     }
 } 

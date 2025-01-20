@@ -16,7 +16,7 @@ struct SectionView: View {
     var body: some View {
         let screenWidth = UIScreen.main.bounds.width // Ekran genişliği
         let cardWidth = (screenWidth / 2) - 24      // Her kartın genişliği
-        let cardHeight = cardWidth * 1.2    // Kartın yüksekliği (oran: 0.6)
+        let cardHeight = cardWidth * 1.1    // Kartın yüksekliği (oran: 0.6)
         
         VStack(alignment: .leading){
             HStack{

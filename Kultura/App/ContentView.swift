@@ -16,6 +16,7 @@ struct ContentView: View {
         //RestaurantMapView()
         //SignupView()
         
+        
         appCoordinator.start()
             .onReceive(appCoordinator.$currentView) { newView in
                 // Ekranı güncellemek için dinamik olarak izleme

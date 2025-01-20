@@ -51,10 +51,18 @@ struct HomeView: View {
                             actionText: "Reserve now"
                         )
                     }, seeAll: {})
+                    
+                    // Top 5 Restaurants Section
+                    SectionView(title: "Top 5 Restaurants", items: viewModel.topRestaurants.map { restaurant in
+                        HomeRestaurantCardView(
+                            restaurant: restaurant,
+                            actionText: "Reserve now"
+                        )
+                    }, seeAll: {})
                 }
             }
             .onAppear {
-                viewModel.fetchRestaurants()
+                viewModel.onAppear()
             }
             .overlay {
                 if viewModel.isLoading {
@@ -73,7 +81,6 @@ struct HomeView: View {
             .background(Color("appSecondary"))
         }
         .navigationBarBackButtonHidden(true)
-        
     }
 }
 

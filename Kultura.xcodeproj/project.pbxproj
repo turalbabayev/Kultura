@@ -101,6 +101,8 @@
 		F6D0F9322D3D761900FC6AFC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D0F9312D3D761900FC6AFC /* HomeViewModel.swift */; };
 		F6D0F9342D3D76D900FC6AFC /* UIRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D0F9332D3D76D900FC6AFC /* UIRestaurant.swift */; };
 		F6D0F9362D3D78FA00FC6AFC /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D0F9352D3D78FA00FC6AFC /* AsyncImageView.swift */; };
+		F6D0F9382D3D925A00FC6AFC /* UserIDResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D0F9372D3D925A00FC6AFC /* UserIDResponse.swift */; };
+		F6D0F93A2D3D92C900FC6AFC /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D0F9392D3D92C900FC6AFC /* EmptyResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,6 +220,8 @@
 		F6D0F9312D3D761900FC6AFC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F6D0F9332D3D76D900FC6AFC /* UIRestaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRestaurant.swift; sourceTree = "<group>"; };
 		F6D0F9352D3D78FA00FC6AFC /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		F6D0F9372D3D925A00FC6AFC /* UserIDResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIDResponse.swift; sourceTree = "<group>"; };
+		F6D0F9392D3D92C900FC6AFC /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -458,6 +462,8 @@
 		F685F2D32D066FE400090EBF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F6D0F9392D3D92C900FC6AFC /* EmptyResponse.swift */,
+				F6D0F9372D3D925A00FC6AFC /* UserIDResponse.swift */,
 				F6D0F9332D3D76D900FC6AFC /* UIRestaurant.swift */,
 				F6D0F9282D3D753400FC6AFC /* Restaurant.swift */,
 				F6D0F9262D3D484F00FC6AFC /* SignupResponse.swift */,
@@ -887,10 +893,12 @@
 				F6D0F9362D3D78FA00FC6AFC /* AsyncImageView.swift in Sources */,
 				F6CD6B6F2D3C48C900E0FEFA /* APIError.swift in Sources */,
 				F6D0F92E2D3D75F100FC6AFC /* RestaurantService.swift in Sources */,
+				F6D0F93A2D3D92C900FC6AFC /* EmptyResponse.swift in Sources */,
 				F646787E2D178C3F00EBCBCA /* LoginViewModel.swift in Sources */,
 				F685F29F2D066DDB00090EBF /* KulturaApp.swift in Sources */,
 				F6D029402D1B2273003A53F6 /* TabContentView.swift in Sources */,
 				F6BD9F9E2D170ECA008B920C /* OnboardingModel.swift in Sources */,
+				F6D0F9382D3D925A00FC6AFC /* UserIDResponse.swift in Sources */,
 				F66DC39B2D21B8680062B1E8 /* InfoRowView.swift in Sources */,
 				F6AEBEE32D1C95C0006945D0 /* Availability.swift in Sources */,
 				F6AEBEF22D1EB0F4006945D0 /* Floor.swift in Sources */,

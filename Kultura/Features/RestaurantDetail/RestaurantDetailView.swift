@@ -12,21 +12,63 @@ struct RestaurantDetailView: View {
     @State private var selectedTab: RestaurantTab = .menu
     @State private var selectedImageIndex = 0
     @State private var isFavorited = false
-
-    private let restaurantImages = ["r2", "r2", "r2"]
+    
+    let restaurant: APIRestaurant // API'den gelen restoran verisi
+    
+    // Resim URL'lerini hesaplayan computed property
+    private var imageUrls: [URL?] {
+        var urls: [URL?] = []
+        
+        // Ana resmi ekle (varsa)
+        if let mainPhotoUrl = restaurant.mainPhoto {
+            urls.append(URL(string: mainPhotoUrl))
+        }
+        
+        // Diğer resimleri ekle (varsa)
+        let photoValues = restaurant.photos.values
+        if !photoValues.isEmpty {
+            urls.append(contentsOf: photoValues.map { URL(string: $0) })
+        }
+        
+        // Hiç resim yoksa boş array dön
+        return urls.isEmpty ? [nil] : urls
+    }
     
     var body : some View {
         NavigationView {
             VStack(spacing: 0){
                 ZStack(alignment: .top){
                     TabView(selection: $selectedImageIndex){
-                        ForEach(restaurantImages.indices, id: \.self) { index in
-                            Image(restaurantImages[index])
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: UIScreen.main.bounds.width, height: 340)
-                                .clipped()
-                                .tag(index)
+                        ForEach(imageUrls.indices, id: \.self) { index in
+                            Group {
+                                if let url = imageUrls[index] {
+                                    AsyncImage(url: url) { phase in
+                                        switch phase {
+                                        case .empty:
+                                            ProgressView()
+                                        case .success(let image):
+                                            image
+                                                .resizable()
+                                                .scaledToFill()
+                                        case .failure(_):
+                                            Image("r2")
+                                                .resizable()
+                                                .scaledToFill()
+                                        @unknown default:
+                                            Image("r2")
+                                                .resizable()
+                                                .scaledToFill()
+                                        }
+                                    }
+                                } else {
+                                    Image("r2")
+                                        .resizable()
+                                        .scaledToFill()
+                                }
+                            }
+                            .frame(width: UIScreen.main.bounds.width, height: 340)
+                            .clipped()
+                            .tag(index)
                         }
                     }
                     .tabViewStyle(PageTabViewStyle())
@@ -67,7 +109,7 @@ struct RestaurantDetailView: View {
                     
                     HStack(alignment: .bottom){
                         Spacer()
-                        Text("\(selectedImageIndex + 1)/\(restaurantImages.count)")
+                        Text("\(selectedImageIndex + 1)/\(imageUrls.count)")
                             .font(.caption)
                             .foregroundColor(.white)
                             .padding(8)
@@ -87,25 +129,42 @@ struct RestaurantDetailView: View {
                             .padding(4.5)
                             .background(Color.gray.opacity(0.2))
                             .cornerRadius(24)
-
+                        
                         Spacer()
                         
-                        InfoRowView(imageName: "star", title: "5.0", value: "(45 Reviews)", valueColor: .gray)
-                        
+                        InfoRowView(
+                            imageName: "star",
+                            title: String(format: "%.1f", restaurant.averageRating),
+                            value: "(45 Reviews)",
+                            valueColor: .gray
+                        )
                     }
                     
                     HStack{
-                        Text("Coffemania Narimanov")
+                        Text(restaurant.name)
                             .font(AppFonts.customFont(name: "Poppins", size: 20))
                     }
                     
                     VStack(alignment: .leading, spacing: 8) {
-                        InfoRowView(imageName: "clock", title: "Open until:", value: "22:00", valueColor: .gray)
-                        InfoRowView(imageName: "dollar-circle", title: "Average Price:", value: "30-40 AZN", valueColor: .gray)
-                        InfoRowView(imageName: "dollar-circle", title: "Cuisine", value: "Turkish", valueColor: .gray)
+                        InfoRowView(
+                            imageName: "clock",
+                            title: "Open until:",
+                            value: restaurant.closingTime,
+                            valueColor: .gray
+                        )
+                        InfoRowView(
+                            imageName: "dollar-circle",
+                            title: "Average Price:",
+                            value: "\(Int(restaurant.minPrice))-\(Int(restaurant.maxPrice)) AZN",
+                            valueColor: .gray
+                        )
+                        InfoRowView(
+                            imageName: "dollar-circle",
+                            title: "Cuisine",
+                            value: restaurant.cuisines,
+                            valueColor: .gray
+                        )
                     }
-                    
-                    
                 }
                 .padding()
                 .background(Color("appSecondary"))
@@ -162,9 +221,9 @@ struct RestaurantDetailView: View {
             }
             .background(Color("appSecondary"))
         }
+        .navigationBarBackButtonHidden()
     }
 }
 
-#Preview {
-    RestaurantDetailView()
-}
+
+

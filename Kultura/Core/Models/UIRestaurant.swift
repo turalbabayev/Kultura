@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct UIRestaurant: Identifiable {
-    let id = UUID()
+    let id: String
     let name: String
     let rating: Double
     let priceRange: String
@@ -18,10 +18,14 @@ struct UIRestaurant: Identifiable {
     let rightIcon: Image?
     let leftIconColor: Color?
     let hasBorder: Bool
+    let minPrice: Double
+    let maxPrice: Double
+    let originalRestaurant: APIRestaurant // API modelini saklıyoruz
     
     // API modelinden UI modeline dönüştürme
     static func fromAPI(_ apiRestaurant: APIRestaurant) -> UIRestaurant {
         return UIRestaurant(
+            id: apiRestaurant.id,
             name: apiRestaurant.name,
             rating: apiRestaurant.averageRating,
             priceRange: "\(Int(apiRestaurant.minPrice))-\(Int(apiRestaurant.maxPrice)) AZN",
@@ -29,7 +33,10 @@ struct UIRestaurant: Identifiable {
             leftIcon: nil,
             rightIcon: nil,
             leftIconColor: nil,
-            hasBorder: false
+            hasBorder: false,
+            minPrice: apiRestaurant.minPrice,
+            maxPrice: apiRestaurant.maxPrice,
+            originalRestaurant: apiRestaurant
         )
     }
 } 

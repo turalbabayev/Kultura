@@ -94,7 +94,7 @@ struct LoginView: View {
                     }
                     .navigationBarBackButtonHidden(true)
                     .navigationBarHidden(true)
-                    .navigationDestination(isPresented: $viewModel.isLoginSuccessful) {
+                    .navigationDestination(isPresented: $viewModel.isLoggedIn) {
                         TabBarView()
                             .navigationBarBackButtonHidden(true)
                             .navigationBarHidden(true)
